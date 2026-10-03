@@ -26,11 +26,15 @@ def get_or_create_community(community_name):
     Get an existing community by name or create it if it doesn't exist.
 
     Args:
-        community_name: Name of the community (also used as slug)
+        community_name: Name of the community (folder name like 'research-group' or 'research_group')
 
     Returns:
         Community ID
     """
+    # Convert folder name to display title
+    # Replace - and _ with spaces, then capitalize each word
+    display_title = community_name.replace("-", " ").replace("_", " ").title()
+
     try:
         # Try to find existing community by slug
         communities_svc = current_communities.service
@@ -41,7 +45,7 @@ def get_or_create_community(community_name):
 
         if len(results) > 0:
             community_id = results[0]["id"]
-            print(f"  ✓ Using existing community: {community_name} (ID: {community_id})")
+            print(f"  ✓ Using existing community: {display_title} (ID: {community_id})")
             return community_id
     except Exception as e:
         print(f"  ⚠ Could not search for community: {str(e)}")
@@ -52,8 +56,8 @@ def get_or_create_community(community_name):
 
         community_data = {
             "metadata": {
-                "title": community_name,
-                "description": f"Community for {community_name} datasets"
+                "title": display_title,
+                "description": f"Community for {display_title} datasets"
             },
             "access": {
                 "visibility": "public"
@@ -67,11 +71,11 @@ def get_or_create_community(community_name):
             uow.commit()
 
         community_id = community.id
-        print(f"  ✓ Created new community: {community_name} (ID: {community_id})")
+        print(f"  ✓ Created new community: {display_title} (ID: {community_id})")
         return community_id
 
     except Exception as e:
-        print(f"  ✗ Failed to create community {community_name}: {str(e)}")
+        print(f"  ✗ Failed to create community {display_title}: {str(e)}")
         return None
 
 
