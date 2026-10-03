@@ -1,0 +1,296 @@
+{
+  "access": {
+    "embargo": {
+      "active": false,
+      "reason": null
+    },
+    "files": "public",
+    "record": "public",
+    "status": "metadata-only"
+  },
+  "created": "2026-09-23T22:03:23.996616+00:00",
+  "custom_fields": {
+    "has_manifest": false
+  },
+  "deletion_status": {
+    "is_deleted": false,
+    "status": "P"
+  },
+  "files": {
+    "count": 0,
+    "enabled": false,
+    "entries": {},
+    "order": [],
+    "total_bytes": 0
+  },
+  "id": "fn8ez-w6983",
+  "is_draft": false,
+  "is_published": true,
+  "links": {
+    "access": "https://atlas.dev.pnnl.gov/api/records/fn8ez-w6983/access",
+    "access_grants": "https://atlas.dev.pnnl.gov/api/records/fn8ez-w6983/access/grants",
+    "access_groups": "https://atlas.dev.pnnl.gov/api/records/fn8ez-w6983/access/groups",
+    "access_links": "https://atlas.dev.pnnl.gov/api/records/fn8ez-w6983/access/links",
+    "access_request": "https://atlas.dev.pnnl.gov/api/records/fn8ez-w6983/access/request",
+    "access_users": "https://atlas.dev.pnnl.gov/api/records/fn8ez-w6983/access/users",
+    "archive": "https://atlas.dev.pnnl.gov/api/records/fn8ez-w6983/files-archive",
+    "archive_media": "https://atlas.dev.pnnl.gov/api/records/fn8ez-w6983/media-files-archive",
+    "communities": "https://atlas.dev.pnnl.gov/api/records/fn8ez-w6983/communities",
+    "communities-suggestions": "https://atlas.dev.pnnl.gov/api/records/fn8ez-w6983/communities-suggestions",
+    "draft": "https://atlas.dev.pnnl.gov/api/records/fn8ez-w6983/draft",
+    "files": "https://atlas.dev.pnnl.gov/api/records/fn8ez-w6983/files",
+    "latest": "https://atlas.dev.pnnl.gov/api/records/fn8ez-w6983/versions/latest",
+    "latest_html": "https://atlas.dev.pnnl.gov/records/fn8ez-w6983/latest",
+    "media_files": "https://atlas.dev.pnnl.gov/api/records/fn8ez-w6983/media-files",
+    "parent": "https://atlas.dev.pnnl.gov/api/records/v76gr-26149",
+    "parent_html": "https://atlas.dev.pnnl.gov/records/v76gr-26149",
+    "preview_html": "https://atlas.dev.pnnl.gov/records/fn8ez-w6983?preview=1",
+    "requests": "https://atlas.dev.pnnl.gov/api/records/fn8ez-w6983/requests",
+    "reserve_doi": "https://atlas.dev.pnnl.gov/api/records/fn8ez-w6983/draft/pids/doi",
+    "self": "https://atlas.dev.pnnl.gov/api/records/fn8ez-w6983",
+    "self_html": "https://atlas.dev.pnnl.gov/records/fn8ez-w6983",
+    "self_iiif_manifest": "https://atlas.dev.pnnl.gov/api/iiif/record:fn8ez-w6983/manifest",
+    "self_iiif_sequence": "https://atlas.dev.pnnl.gov/api/iiif/record:fn8ez-w6983/sequence/default",
+    "versions": "https://atlas.dev.pnnl.gov/api/records/fn8ez-w6983/versions"
+  },
+  "media_files": {
+    "count": 0,
+    "enabled": false,
+    "entries": {},
+    "order": [],
+    "total_bytes": 0
+  },
+  "metadata": {
+    "creators": [
+      {
+        "affiliations": [
+          {
+            "name": "Pacific Northwest National Laboratory"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Zhou",
+          "given_name": "Tian",
+          "identifiers": [
+            {
+              "identifier": "0000-0003-1582-4005",
+              "scheme": "orcid"
+            }
+          ],
+          "name": "Zhou, Tian",
+          "type": "personal"
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Oak Ridge National Laboratory"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Kao",
+          "given_name": "Shih-Chieh",
+          "identifiers": [
+            {
+              "identifier": "0000-0002-3207-5328",
+              "scheme": "orcid"
+            }
+          ],
+          "name": "Kao, Shih-Chieh",
+          "type": "personal"
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Pacific Northwest National Laboratory"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Xu",
+          "given_name": "Wenwei",
+          "identifiers": [
+            {
+              "identifier": "0000-0002-4518-1867",
+              "scheme": "orcid"
+            }
+          ],
+          "name": "Xu, Wenwei",
+          "type": "personal"
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Oak Ridge National Laboratory"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Gangrade",
+          "given_name": "Sudershan",
+          "identifiers": [
+            {
+              "identifier": "0000-0002-0730-0810",
+              "scheme": "orcid"
+            }
+          ],
+          "name": "Gangrade, Sudershan",
+          "type": "personal"
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Pacific Northwest National Laboratory"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Voisin",
+          "given_name": "Nathalie",
+          "identifiers": [
+            {
+              "identifier": "0000-0002-6848-449X",
+              "scheme": "orcid"
+            }
+          ],
+          "name": "Voisin, Nathalie",
+          "type": "personal"
+        }
+      }
+    ],
+    "description": "<p>This dataset contains an ensemble of monthly hydropower generation projections for the United States Federal Hydropower plants for the periods of 1966-2005 (historical period) and 2011-2050 (future period). The dataset includes the monthly hydropower projections developed in (Kao et al. 2016) based on the Watershed Runoff-Energy Storage (WRES) model and is complemented with another ensemble based on the process-based Water Management Power (WMP) model.</p>\n\n<p>The hydrologic projections are estimated through a cascading modeling toolchain that include ten global climate change model projections (ACCESS1-0, BCC-CSM1-1, CCSM4, CMCC-CM, GFDL-ESM2M, MIROC5, MPI-ESM-MR, MRI-CGCM3, NorESM1-M and IPSL-CM5A-LR) under RCP8.5 scenario, which are dynamically downscaled with a regional climate model (RegCM4) ( Pal et al. 2007, Giorgi et al. 2012)), which then inform the Variable Infiltration Capacity (VIC) hydrology model (Liang et al. 1994). The ensemble of hydrologic projections is then informing two processes to translate runoff into hydropower projections. First, WRES models monthly river routing and employs a non-linear statistical approach relating monthly natural flow to hydropower generation, including processes such as spilling. Second, MOSART-WM (Voisin et al. 2013), a large-scale river routing and water management model, provides daily reservoir storage and regulated release at dam locations as well as regulated flow at run-of-the-river power plants. The WMP model then translates reservoir and regulated river dynamics into hydropower projections (Zhou et al. 2018). Those projections are further calibrated to monthly generation provided by the federal utilities. The US federal hydropower plants analyzed in this study include 132 facilities that were built and/or are operated by the US Army Corps of Engineers (USACE), the Bureau of Reclamation (Reclamation), and the International Boundary and Water Commission (IBWC). The electricity generation projected for these hydropower plants were aggregated by four Power Marketing Administrations (PMAs), including Bonneville Power Administration (BPA), Southeastern Power Administration (SEPA), Southwestern Power Administration (SWPA), and Western Area Power Administration (WAPA), and their associate subregions.</p>\n\n<p>The two files, <em>SWA9505V2_Gsim_PMA_WRES.mat</em> and <em>SWA9505V2_Gsim_PMA_WMP.mat</em>, represent model outputs from the two hydropower models, WRES and WMP respectively.</p>\n\n<p>Each file contains 6 variables:</p>\n\n<p>1) &ldquo;Models&rdquo;: the 10 global climate models (GCMs).</p>\n\n<p>2) &ldquo;PMA_areas&rdquo;: the 18 subregions of PMAs as defined in (Kao et al. 2015).</p>\n\n<p>3) &ldquo;PMA_G_mn_6605&rdquo;: &nbsp;1966-2005 projected monthly hydropower generation for each PMA sub-regions. Dimension: (12 [months], 40 [years], 18 [subregions], 10 [GCMs]). Unit: MWH.</p>\n\n<p>4) &ldquo;PMA_G_mn_1150&rdquo;:&nbsp; Same as &ldquo;PMA_G_mn_6605&rdquo;, but for 2011-2050 projected hydropower generation.</p>\n\n<p>5) &ldquo;PMA_G_yr_6605&rdquo;:&nbsp; 1966-2005 projected annual hydropower generation. Dimension: (40 [years], 18 [subregions], 10 [GCMs]) . Unit: MWH.</p>\n\n<p>6) &ldquo;PMA_G_yr_1150&rdquo;:&nbsp; Same as &ldquo;PMA_G_yr_6605&rdquo;, but for 2011-2050 projected hydropower generation.</p>\n\n<p>The following journal paper details the method in creating the dataset:</p>\n\n<p><strong>Impacts of Climate Change on Subannual Hydropower Generation: A Multi-model Assessment of the United States Federal Hydropower Plants</strong></p>\n\n<p><strong>Zhou et al. (2022) Preparing for submission to Environmental Research Letters. This study was supported by the U.S. Department of Energy Water Power Technologies Office as a part of the SECURE Water Act Section 9505 Assessment. The research used resources of the Oak Ridge Leadership Computing Facility at ORNL, which is a DOE Office of Science User Facility. This paper was coauthored by employees of Oak Ridge National Laboratory, managed by UT Battelle, LLC, under contract DE-AC05-00OR22725, and the Pacific Northwest National Laboratory, managed by Battelle under contract DE-AC05-76RL01830 (both contracts are with the U.S. Department of Energy).</strong></p>",
+    "publication_date": "2022-08-30",
+    "references": [
+      {
+        "reference": "Kao, Shih-Chieh, Moetasim Ashfaq, Bibi S. Naz, Rocio Uria Martinez, Deeksha Rastogi, Rui Mei, Yetta Jager, Nicole M. Samu, and Michael J. Sale. 2016. The Second Assessment of the Effects of Climate Change on Federal Hydropower. United States."
+      },
+      {
+        "reference": "Kao, Shih-Chieh, Michael J. Sale, Moetasim Ashfaq, Rocio Uria Martinez, Dale P. Kaiser, Yaxing Wei, and Noah S. Diffenbaugh. 2015. \"Projecting changes in annual hydropower generation using regional runoff data: An assessment of the United States federal hydropower plants.\" Energy 80:239-250. doi: https://doi.org/10.1016/j.energy.2014.11.066."
+      },
+      {
+        "reference": "Liang, Xu, Dennis P. Lettenmaier, Eric F. Wood, and Stephen J. Burges. 1994. \"A simple hydrologically based model of land surface water and energy fluxes for general circulation models.\" Journal of Geophysical Research: Atmospheres 99 (D7):14415-14428. doi: 10.1029/94jd00483."
+      },
+      {
+        "reference": "Voisin, Nathalie, Hongyi Li, D. Ward, Maoyi Huang, M. Wigmosta, and L. R. Leung. \"On an improved sub-regional water resources management representation for integration into earth system models.\" Hydrology and Earth System Sciences 17, no. 9 (2013): 3605-3622."
+      },
+      {
+        "reference": "Zhou, Tian, Nathalie Voisin, and Tao Fu. \"Non-stationary hydropower generation projections constrained by environmental and electricity grid operations over the western United States.\" Environmental Research Letters 13, no. 7 (2018): 074035."
+      }
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.5281/zenodo.6506089",
+        "relation_type": {
+          "id": "ismetadatafor",
+          "title": {
+            "cs": "Je metadaty pro",
+            "de": "Hat Metadaten f\u00fcr",
+            "en": "Is metadata for",
+            "sv": "\u00c4r metadata f\u00f6r"
+          }
+        },
+        "resource_type": {
+          "id": "dataset",
+          "title": {
+            "cs": "Datov\u00e1 sada",
+            "de": "Datensatz",
+            "en": "Dataset",
+            "sv": "Dataset"
+          }
+        },
+        "scheme": "doi"
+      }
+    ],
+    "resource_type": {
+      "id": "dataset",
+      "title": {
+        "cs": "Datov\u00e1 sada",
+        "de": "Datensatz",
+        "en": "Dataset",
+        "sv": "Dataset"
+      }
+    },
+    "rights": [
+      {
+        "description": {
+          "en": "The Creative Commons Attribution license allows re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited."
+        },
+        "icon": "cc-by-icon",
+        "id": "cc-by-4.0",
+        "props": {
+          "scheme": "spdx",
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        "title": {
+          "en": "Creative Commons Attribution 4.0 International"
+        }
+      }
+    ],
+    "subjects": [
+      {
+        "subject": "Hydropower"
+      },
+      {
+        "subject": "climate change"
+      },
+      {
+        "subject": "multi-model assessment"
+      },
+      {
+        "subject": "WRES"
+      },
+      {
+        "subject": "WMP"
+      }
+    ],
+    "title": "Multi-model Hydropower Projections for the United States Federal Power Marketing Areas under CMIP5 Climate Change Conditions"
+  },
+  "parent": {
+    "access": {
+      "grants": [],
+      "links": [],
+      "owned_by": {
+        "user": "10"
+      },
+      "settings": {
+        "accept_conditions_text": null,
+        "allow_guest_requests": false,
+        "allow_user_requests": false,
+        "secret_link_expiration": 0
+      }
+    },
+    "communities": {},
+    "id": "v76gr-26149",
+    "pids": {}
+  },
+  "pids": {
+    "oai": {
+      "identifier": "oai:rdm-app.com:fn8ez-w6983",
+      "provider": "oai"
+    }
+  },
+  "revision_id": 4,
+  "stats": {
+    "all_versions": {
+      "data_volume": 0.0,
+      "downloads": 0,
+      "unique_downloads": 0,
+      "unique_views": 0,
+      "views": 0
+    },
+    "this_version": {
+      "data_volume": 0.0,
+      "downloads": 0,
+      "unique_downloads": 0,
+      "unique_views": 0,
+      "views": 0
+    }
+  },
+  "status": "published",
+  "updated": "2026-09-23T22:03:24.092932+00:00",
+  "versions": {
+    "index": 1,
+    "is_latest": true,
+    "is_latest_draft": true
+  }
+}

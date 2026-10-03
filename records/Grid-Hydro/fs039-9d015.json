@@ -1,0 +1,332 @@
+{
+  "access": {
+    "embargo": {
+      "active": false,
+      "reason": null
+    },
+    "files": "public",
+    "record": "public",
+    "status": "metadata-only"
+  },
+  "created": "2026-09-09T18:30:23.217629+00:00",
+  "custom_fields": {
+    "has_manifest": false
+  },
+  "deletion_status": {
+    "is_deleted": false,
+    "status": "P"
+  },
+  "files": {
+    "count": 0,
+    "enabled": false,
+    "entries": {},
+    "order": [],
+    "total_bytes": 0
+  },
+  "id": "fs039-9d015",
+  "is_draft": false,
+  "is_published": true,
+  "links": {
+    "access": "https://atlas.dev.pnnl.gov/api/records/fs039-9d015/access",
+    "access_grants": "https://atlas.dev.pnnl.gov/api/records/fs039-9d015/access/grants",
+    "access_groups": "https://atlas.dev.pnnl.gov/api/records/fs039-9d015/access/groups",
+    "access_links": "https://atlas.dev.pnnl.gov/api/records/fs039-9d015/access/links",
+    "access_request": "https://atlas.dev.pnnl.gov/api/records/fs039-9d015/access/request",
+    "access_users": "https://atlas.dev.pnnl.gov/api/records/fs039-9d015/access/users",
+    "archive": "https://atlas.dev.pnnl.gov/api/records/fs039-9d015/files-archive",
+    "archive_media": "https://atlas.dev.pnnl.gov/api/records/fs039-9d015/media-files-archive",
+    "communities": "https://atlas.dev.pnnl.gov/api/records/fs039-9d015/communities",
+    "communities-suggestions": "https://atlas.dev.pnnl.gov/api/records/fs039-9d015/communities-suggestions",
+    "draft": "https://atlas.dev.pnnl.gov/api/records/fs039-9d015/draft",
+    "files": "https://atlas.dev.pnnl.gov/api/records/fs039-9d015/files",
+    "latest": "https://atlas.dev.pnnl.gov/api/records/fs039-9d015/versions/latest",
+    "latest_html": "https://atlas.dev.pnnl.gov/records/fs039-9d015/latest",
+    "media_files": "https://atlas.dev.pnnl.gov/api/records/fs039-9d015/media-files",
+    "parent": "https://atlas.dev.pnnl.gov/api/records/ndkdc-ffr67",
+    "parent_html": "https://atlas.dev.pnnl.gov/records/ndkdc-ffr67",
+    "preview_html": "https://atlas.dev.pnnl.gov/records/fs039-9d015?preview=1",
+    "requests": "https://atlas.dev.pnnl.gov/api/records/fs039-9d015/requests",
+    "reserve_doi": "https://atlas.dev.pnnl.gov/api/records/fs039-9d015/draft/pids/doi",
+    "self": "https://atlas.dev.pnnl.gov/api/records/fs039-9d015",
+    "self_html": "https://atlas.dev.pnnl.gov/records/fs039-9d015",
+    "self_iiif_manifest": "https://atlas.dev.pnnl.gov/api/iiif/record:fs039-9d015/manifest",
+    "self_iiif_sequence": "https://atlas.dev.pnnl.gov/api/iiif/record:fs039-9d015/sequence/default",
+    "versions": "https://atlas.dev.pnnl.gov/api/records/fs039-9d015/versions"
+  },
+  "media_files": {
+    "count": 0,
+    "enabled": false,
+    "entries": {},
+    "order": [],
+    "total_bytes": 0
+  },
+  "metadata": {
+    "creators": [
+      {
+        "affiliations": [
+          {
+            "name": "Pacific Northwest National Laboratory"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Voisin",
+          "given_name": "Nathalie",
+          "identifiers": [
+            {
+              "identifier": "0000-0002-6848-449X",
+              "scheme": "orcid"
+            }
+          ],
+          "name": "Voisin, Nathalie",
+          "type": "personal"
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Pacific Northwest National Laboratory"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Broman",
+          "given_name": "Daniel",
+          "identifiers": [
+            {
+              "identifier": "0000-0001-8281-3299",
+              "scheme": "orcid"
+            }
+          ],
+          "name": "Broman, Daniel",
+          "type": "personal"
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Pacific Northwest National Laboratory"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Abernethy-Cannella",
+          "given_name": "Kerry",
+          "identifiers": [
+            {
+              "identifier": "0000-0002-7540-3168",
+              "scheme": "orcid"
+            }
+          ],
+          "name": "Abernethy-Cannella, Kerry",
+          "type": "personal"
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Pacific Northwest National Laboratory"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Bracken",
+          "given_name": "Cameron",
+          "identifiers": [
+            {
+              "identifier": "0000-0003-1917-402X",
+              "scheme": "orcid"
+            }
+          ],
+          "name": "Bracken, Cameron",
+          "type": "personal"
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Pacific Northwest National Laboratory"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Son",
+          "given_name": "Youngjun",
+          "identifiers": [
+            {
+              "identifier": "0000-0001-5128-2499",
+              "scheme": "orcid"
+            }
+          ],
+          "name": "Son, Youngjun",
+          "type": "personal"
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Pacific Northwest National Laboratory"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Harris",
+          "given_name": "Kevin",
+          "name": "Harris, Kevin",
+          "type": "personal"
+        }
+      }
+    ],
+    "description": "<p>Every two years the WECC (Western Electricity Coordinating Council) releases an Anchor Data Set (ADS) to be analyzed with a Production Cost Models (PCM) and which represents the expected loads, resources, and transmission topology 10 years in the future from a given reference year. For hydropower resources, the WECC relies on members to provide data to parameterize the hydropower representation in production cost models. The datasets consist of plant-level hydropower generation, flexibility, ramping, and mode of operations and are tied to the hydropower representation in those production cost models.&nbsp;</p>\n<p>In 2022, PNNL supported the WECC by developing the WECC ADS 2032 hydropower dataset [1]. The WECC ADS 2032 hydropower dataset (generation and flexibility) included an update of the climate year conditions (2018 calendar year), consistency in representation across the entire US WECC footprint, updated hydropower operations over the core Columbia River, and a higher temporal resolution (weekly instead of monthly)[1] associated with a GridView software update (weekly hydro logic). Proprietary WECC utility hydropower data were used when available to develop the monthly and weekly datasets and were completed with HydroWIRES B1 methods to develop the Hydro 923 plus (now RectifHydPlus weekly hydropower dataset) [2] and the flexibility parameterization [3]. The team worked with Bonneville Power Administration to develop hydropower datasets over the core Columbia River representative of the post-2018 change in environmental regulation (flex spill). Ramping data are considered proprietary, were leveraged from WECC ADS 2030, and were not provided in the release, nor are the WECC-member hydropower data.</p>\n<p>This release represents the WECC ADS 2034 hydropower dataset. The generator database was first updated by WECC. Based on a review of hourly generation profiles, 16 facilities were transitioned from fixed schedule to dispatchable (380.5MW). The operations of the core Columbia River were updated based on Bonneville Power Administration's long-term hydro-modeling using 2020-level of modified flows and using fiscal year 2031 expected operations. The update was necessary to reflect the new environmental regulation (EIS2023). The team also included a newly developed extension over Canada [4] that improves upon existing data and synchronizes the US and Canadian data to the same 2018 weather year. Canadian facilities over the Peace River were not updated due to a lack of available flow data. The team was able to modernize and improve the overall data processing using modern tools as well as provide thorough documentation and reproducible workflows [5,6]. The datasets have been incorporated into the 2034 ADS and are in active use by WECC and the community.</p>\n<p>WECC ADS 2034 hydropower datasets contain generation at weekly and monthly timesteps, for US hydropower plants, monthly generation for Canadian hydropower plants, and the two merged together. Separate datasets are included for generation by hydropower plant and generation by individual generator units. Only processed data are provided. Original WECC-utility hourly data are under a non-disclosure agreement and for the sole use of developing this dataset.&nbsp;</p>\n<p>[1] Voisin, N., Harris, K. M., Oikonomou, K., Turner, S., Johnson, A., Wallace, S., Racht, P., et al. (2022). WECC ADS 2032 Hydropower Dataset (PNNL-SA-172734). See presentation (Voisin N., K.M. Harris, K. Oikonomou, and S. Turner. 04/05/2022. \"WECC 2032 Anchor Dataset - Hydropower.\" Presented by N. Voisin, K. Oikonomou at WECC Production Cost Model Dataset Subcommittee Meeting, Online, Utah. PNNL-SA-171897.).&nbsp;</p>\n<p>[2] Turner, S. W. D., Voisin, N., Oikonomou, K., &amp; Bracken, C. (2023). Hydro 923: Monthly and Weekly Hydropower Constraints Based on Disaggregated EIA-923 Data (v1.1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.8212727</p>\n<p>[3] Stark, G., Barrows, C., Dalvi, S., Guo, N., Michelettey, P., Trina, E., Watson, A., Voisin, N., Turner, S., Oikonomou, K. and Colotelo, A. 2023 Improving the Representation of Hydropower in Production Cost Models, NREL/TP-5700-86377, United States. https://www.osti.gov/biblio/1993943</p>\n<p>[4] Son, Y., Bracken, C., Broman, D., &amp; Voisin, N. (2025). Monthly Hydropower Generation Dataset for Western Canada (1.1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.14984725</p>\n<p>[5] https://github.com/HydroWIRES-PNNL/weccadshydro/</p>\n<div>\n<div>[6] Voisin, N., Broman, D., Abernethy-Cannella, K., Bracken, C., Son, Y., &amp; Harris, K. (2025). WECC ADS 2034 Hydropower Generation Code (weccadshydro). Zenodo.&nbsp;<a href=\"https://doi.org/10.5281/zenodo.15417594\" target=\"_blank\" rel=\"noopener\">https://doi.org/10.5281/zenodo.15417594</a></div>\n</div>\n<div>\n<div>&nbsp;</div>\n</div>\n<h2>Dataset Files:</h2>\n<table style=\"border-collapse: collapse; width: 100%; height: 156.75px;\"><colgroup><col style=\"width: 25%;\"><col style=\"width: 25%;\"><col style=\"width: 25%;\"><col style=\"width: 25%;\"></colgroup>\n<tbody>\n<tr style=\"height: 19.5938px;\">\n<td style=\"height: 19.5938px;\"><strong>File</strong></td>\n<td style=\"height: 19.5938px;\"><strong>Description</strong></td>\n<td style=\"height: 19.5938px;\"><strong>Timestep</strong></td>\n<td style=\"height: 19.5938px;\"><strong>Spatial Extent</strong></td>\n</tr>\n<tr style=\"height: 19.5938px;\">\n<td style=\"height: 19.5938px;\">US_Monthly_Plant.csv</td>\n<td style=\"height: 19.5938px;\">Generation data for US plants at a monthly timestep</td>\n<td style=\"height: 19.5938px;\">Monthly</td>\n<td style=\"height: 19.5938px;\">US</td>\n</tr>\n<tr style=\"height: 19.5938px;\">\n<td style=\"height: 19.5938px;\">US_Weekly_Plant.csv</td>\n<td style=\"height: 19.5938px;\">Generation data for US plants at a weekly timestep</td>\n<td style=\"height: 19.5938px;\">Weekly</td>\n<td style=\"height: 19.5938px;\">US</td>\n</tr>\n<tr style=\"height: 19.5938px;\">\n<td style=\"height: 19.5938px;\">US_Monthly_Unit.csv</td>\n<td style=\"height: 19.5938px;\">Generation data for US plants by generator units at a monthly timestep</td>\n<td style=\"height: 19.5938px;\">Monthly</td>\n<td style=\"height: 19.5938px;\">US</td>\n</tr>\n<tr style=\"height: 19.5938px;\">\n<td style=\"height: 19.5938px;\">US_Weekly_Unit.csv</td>\n<td style=\"height: 19.5938px;\">Generation data for US plants by generator units at a weekly timestep</td>\n<td style=\"height: 19.5938px;\">Weekly</td>\n<td style=\"height: 19.5938px;\">US</td>\n</tr>\n<tr style=\"height: 19.5938px;\">\n<td style=\"height: 19.5938px;\">Canada_Monthly_Plant.csv</td>\n<td style=\"height: 19.5938px;\">Generation data for Canadian plants at a monthly timestep</td>\n<td style=\"height: 19.5938px;\">Monthly</td>\n<td style=\"height: 19.5938px;\">Canada</td>\n</tr>\n<tr style=\"height: 19.5938px;\">\n<td style=\"height: 19.5938px;\">Canada_Monthly_Unit.csv</td>\n<td style=\"height: 19.5938px;\">Generation data for Canadian plants by generator units at a monthly timestep</td>\n<td style=\"height: 19.5938px;\">Monthly</td>\n<td style=\"height: 19.5938px;\">Canada</td>\n</tr>\n<tr>\n<td>Merged_Monthly_Plant.csv</td>\n<td>Generation data for US and Canadian plants at a monthly timestep</td>\n<td>Monthly</td>\n<td>US and Canada</td>\n</tr>\n<tr>\n<td>Merged_Monthly_Unit.csv</td>\n<td>Generation data for US and Canadian plants by generator units at a monthly timestep</td>\n<td>Monthly</td>\n<td>US and Canada</td>\n</tr>\n<tr>\n<td>PNNL-SA-211434.pdf</td>\n<td>Overview presentation of the WECC ADS 2034 dataset</td>\n<td>N/A</td>\n<td>N/A</td>\n</tr>\n<tr>\n<td>PNNL-SA-171897.pdf</td>\n<td>Overview presentation of the WECC ADS 2032 dataset</td>\n<td>N/A</td>\n<td>N/A</td>\n</tr>\n</tbody>\n</table>\n<h2>Data Description:</h2>\n<p>Each dataset contains the following column headers:</p>\n<table>\n<tbody>\n<tr>\n<td><strong>Column Name</strong></td>\n<td><strong>Unit</strong></td>\n<td><strong>Description</strong></td>\n</tr>\n<tr>\n<td>Source</td>\n<td>N/A</td>\n<td>Indicates the method used to develop the data (<em>see below</em>)</td>\n</tr>\n<tr>\n<td>Generator Name</td>\n<td>N/A</td>\n<td>Generator name used in WECC PCM (<em>in unit datasets</em>)</td>\n</tr>\n<tr>\n<td style=\"height: 16.0pt; width: 65pt;\">EIA ID</td>\n<td>N/A</td>\n<td>Energy Information Administration (EIA) plant ID (<em>in plant datasets</em>)</td>\n</tr>\n<tr>\n<td>DataTypeName</td>\n<td>N/A</td>\n<td>Data type (<em>see below</em>)</td>\n</tr>\n<tr>\n<td>DatatypeID</td>\n<td>N/A</td>\n<td>Data type ID</td>\n</tr>\n<tr>\n<td>Year</td>\n<td>year</td>\n<td>Year (<em>not used</em>)</td>\n</tr>\n<tr>\n<td>Week1 [Month1]</td>\n<td>MWh</td>\n<td>generation MWh value for data type; subsequent week or month columns contain data for each week or month in the dataset period</td>\n</tr>\n</tbody>\n</table>\n<p>&nbsp;</p>\n<h3>Data Source (Method)</h3>\n<p>The dataset contains data from four different data sources, developed using different methods:</p>\n<table style=\"border-collapse: collapse; width: 100.063%;\"><colgroup><col style=\"width: 17.1413%;\"><col style=\"width: 82.8464%;\"></colgroup>\n<tbody>\n<tr>\n<td><strong>Source</strong></td>\n<td><strong>Description</strong></td>\n</tr>\n<tr>\n<td>PNNL</td>\n<td style=\"padding: .75pt .75pt .75pt .75pt;\">\n<p>Weekly / monthly aggregation performed by PNNL using hourly observed facility-scale generation provided in 2022 by asset owners for year 2018</p>\n</td>\n</tr>\n<tr>\n<td>BPA</td>\n<td style=\"padding: .75pt .75pt .75pt .75pt;\">\n<p>BPA long-term hydromodeling (HYDSIM) with 2020-Level Modified Flows for Water Years 1989-2018 Using FY 2031 expected operations (EIS2023). Jan-Sept comes from 2018 and Oct-Dec from year 2007.&nbsp;<br>Weekly disaggregation performed by PNNL based on daily observed 2018 flow. Hourly flexibility was evaluated by PNNL using hourly observed facility-scale generation in years 2018, 2019 and 2021.&nbsp;</p>\n</td>\n</tr>\n<tr>\n<td>CAISO</td>\n<td style=\"padding: .75pt .75pt .75pt .75pt;\">\n<p>Weekly / monthly aggregation performed by CAISO using hourly observed facility-scale generation for 2018. Daily flexibility also directly provided by CAISO</p>\n</td>\n</tr>\n<tr>\n<td>Canada</td>\n<td style=\"padding: .75pt .75pt .75pt .75pt;\">\n<p>Monthly data developed by PNNL using a scaling and disaggregation method for Canadian hydropower facilities (presented in [5] Son et al., 2025)</p>\n</td>\n</tr>\n</tbody>\n</table>\n<h3>Data Type</h3>\n<p>The 'data types' field in each dataset refers to inputs required by <a href=\"https://www.hitachienergy.com/us/en/products-and-solutions/energy-portfolio-management/enterprise/gridview\">GridView</a>, a grid modeling software platform. Dataset development focused on four variables - MinGen, MaxCap, MonthlyEnergy / WeeklyEnergy, and DailyOpRange. The other variables in these datasets were included for compatibility with GridView but were not developed as part of the ADS 2034.</p>\n<table style=\"border-collapse: collapse; width: 674px; height: 162px;\"><colgroup><col style=\"width: 245px;\"><col style=\"width: 428px;\"></colgroup>\n<tbody>\n<tr style=\"height: 20px;\">\n<td style=\"width: 32.5pt; height: 20px;\"><strong>Data Type</strong></td>\n<td style=\"width: 32.5pt; height: 20px;\"><strong>Description</strong></td>\n</tr>\n<tr style=\"height: 39.1875px;\">\n<td style=\"height: 39.1875px;\">MinGen</td>\n<td style=\"padding: .75pt .75pt .75pt .75pt; height: 29.4pt;\">\n<p>Minimum hourly generation within the week or month (MW). This is a normal operating range, a zero-value might be considered for studies outside of normal operations.&nbsp;</p>\n</td>\n</tr>\n<tr style=\"height: 39.1875px;\">\n<td style=\"height: 39.1875px;\">MaxCap</td>\n<td style=\"padding: .75pt .75pt .75pt .75pt; height: 29.4pt;\">\n<p>Maximum hourly generation within the week or month (MW). This is a normal operating range, an operational capacity might be considered for studies outside of normal operations.&nbsp;</p>\n</td>\n</tr>\n<tr style=\"height: 21.3125px;\">\n<td style=\"height: 21.3125px;\">WeeklyEnergy (<em>in weekly datasets</em>)</td>\n<td style=\"padding: .75pt .75pt .75pt .75pt; height: 16.0pt;\">\n<p>Total weekly generation (MW). The weekly targets reflect the coincident wind-solar-load conditions and observed water storage strategies.&nbsp;</p>\n</td>\n</tr>\n<tr style=\"height: 21px;\">\n<td style=\"height: 21px;\">MonthlyEnergy (<em>in monthly datasets</em>)</td>\n<td style=\"padding: .75pt .75pt .75pt .75pt; height: 15.75pt;\">\n<p>Total monthly generation (MW). While the most flexible option, this representation might results in violating water management rules in the production cost model stage.&nbsp;</p>\n</td>\n</tr>\n<tr style=\"height: 21.3125px;\">\n<td style=\"height: 21.3125px;\">DailyOpRange</td>\n<td style=\"padding: .75pt .75pt .75pt .75pt; height: 16.0pt;\">\n<p>Daily operating range (MW) derived from hourly generation</p>\n</td>\n</tr>\n</tbody>\n</table>\n<p>&nbsp;</p>\n<p>The data were developed using Python code. Requests for this code and lookup tables should be made to: <a href=\"mailto:Nathalie.Voisin@pnnl.gov\" target=\"_blank\" rel=\"noopener\">Nathalie Voisin (nathalie.voisin@pnnl.gov).</a> Requests for WECC-member provided hydropower data need to be directed to WECC (https://www.wecc.org/committees/pcds).&nbsp;</p>",
+    "publication_date": "2025-05-14",
+    "publisher": "Zenodo",
+    "related_identifiers": [
+      {
+        "identifier": "10.5281/zenodo.15417594",
+        "relation_type": {
+          "id": "ismetadatafor",
+          "title": {
+            "cs": "Je metadaty pro",
+            "de": "Hat Metadaten f\u00fcr",
+            "en": "Is metadata for",
+            "sv": "\u00c4r metadata f\u00f6r"
+          }
+        },
+        "resource_type": {
+          "id": "dataset",
+          "title": {
+            "cs": "Datov\u00e1 sada",
+            "de": "Datensatz",
+            "en": "Dataset",
+            "sv": "Dataset"
+          }
+        },
+        "scheme": "doi"
+      },
+      {
+        "identifier": "10.5281/zenodo.12617457",
+        "relation_type": {
+          "id": "isnewversionof",
+          "title": {
+            "cs": "Je novou verz\u00ed (\u010deho)",
+            "de": "Ist eine neue Version von",
+            "en": "Is new version of",
+            "sv": "\u00c4r en ny version av"
+          }
+        },
+        "resource_type": {
+          "id": "dataset",
+          "title": {
+            "cs": "Datov\u00e1 sada",
+            "de": "Datensatz",
+            "en": "Dataset",
+            "sv": "Dataset"
+          }
+        },
+        "scheme": "doi"
+      }
+    ],
+    "resource_type": {
+      "id": "dataset",
+      "title": {
+        "cs": "Datov\u00e1 sada",
+        "de": "Datensatz",
+        "en": "Dataset",
+        "sv": "Dataset"
+      }
+    },
+    "rights": [
+      {
+        "description": {
+          "en": "The Creative Commons Attribution license allows re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited."
+        },
+        "icon": "cc-by-icon",
+        "id": "cc-by-4.0",
+        "props": {
+          "scheme": "spdx",
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        "title": {
+          "en": "Creative Commons Attribution 4.0 International"
+        }
+      }
+    ],
+    "title": "WECC ADS 2034 Hydropower Generation Datasets",
+    "version": "3.2.1"
+  },
+  "parent": {
+    "access": {
+      "grants": [],
+      "links": [],
+      "owned_by": {
+        "user": "10"
+      },
+      "settings": {
+        "accept_conditions_text": null,
+        "allow_guest_requests": false,
+        "allow_user_requests": false,
+        "secret_link_expiration": 0
+      }
+    },
+    "communities": {
+      "default": "3c804337-7c49-428c-9b8f-872a330a89f0",
+      "entries": [
+        {
+          "access": {
+            "member_policy": "open",
+            "members_visibility": "public",
+            "record_submission_policy": "open",
+            "review_policy": "closed",
+            "visibility": "public"
+          },
+          "children": {
+            "allow": false
+          },
+          "created": "2026-09-15T18:31:44.402402+00:00",
+          "custom_fields": {},
+          "deletion_status": {
+            "is_deleted": false,
+            "status": "P"
+          },
+          "id": "3c804337-7c49-428c-9b8f-872a330a89f0",
+          "links": {},
+          "metadata": {
+            "title": "Grid Hydro"
+          },
+          "revision_id": 2,
+          "slug": "gridhydro",
+          "updated": "2026-09-15T18:31:46.088467+00:00"
+        }
+      ],
+      "ids": [
+        "3c804337-7c49-428c-9b8f-872a330a89f0"
+      ]
+    },
+    "id": "ndkdc-ffr67",
+    "pids": {}
+  },
+  "pids": {
+    "oai": {
+      "identifier": "oai:rdm-app.com:fs039-9d015",
+      "provider": "oai"
+    }
+  },
+  "revision_id": 8,
+  "stats": {
+    "all_versions": {
+      "data_volume": 0.0,
+      "downloads": 0,
+      "unique_downloads": 0,
+      "unique_views": 11,
+      "views": 13
+    },
+    "this_version": {
+      "data_volume": 0.0,
+      "downloads": 0,
+      "unique_downloads": 0,
+      "unique_views": 11,
+      "views": 13
+    }
+  },
+  "status": "published",
+  "updated": "2026-09-09T19:35:45.390840+00:00",
+  "versions": {
+    "index": 1,
+    "is_latest": true,
+    "is_latest_draft": true
+  }
+}

@@ -1,0 +1,341 @@
+{
+  "access": {
+    "embargo": {
+      "active": false,
+      "reason": null
+    },
+    "files": "public",
+    "record": "public",
+    "status": "metadata-only"
+  },
+  "created": "2026-09-22T20:34:33.025952+00:00",
+  "custom_fields": {
+    "has_manifest": false
+  },
+  "deletion_status": {
+    "is_deleted": false,
+    "status": "P"
+  },
+  "files": {
+    "count": 0,
+    "enabled": false,
+    "entries": {},
+    "order": [],
+    "total_bytes": 0
+  },
+  "id": "62fqm-1yd04",
+  "is_draft": false,
+  "is_published": true,
+  "links": {
+    "access": "https://atlas.dev.pnnl.gov/api/records/62fqm-1yd04/access",
+    "access_grants": "https://atlas.dev.pnnl.gov/api/records/62fqm-1yd04/access/grants",
+    "access_groups": "https://atlas.dev.pnnl.gov/api/records/62fqm-1yd04/access/groups",
+    "access_links": "https://atlas.dev.pnnl.gov/api/records/62fqm-1yd04/access/links",
+    "access_request": "https://atlas.dev.pnnl.gov/api/records/62fqm-1yd04/access/request",
+    "access_users": "https://atlas.dev.pnnl.gov/api/records/62fqm-1yd04/access/users",
+    "archive": "https://atlas.dev.pnnl.gov/api/records/62fqm-1yd04/files-archive",
+    "archive_media": "https://atlas.dev.pnnl.gov/api/records/62fqm-1yd04/media-files-archive",
+    "communities": "https://atlas.dev.pnnl.gov/api/records/62fqm-1yd04/communities",
+    "communities-suggestions": "https://atlas.dev.pnnl.gov/api/records/62fqm-1yd04/communities-suggestions",
+    "draft": "https://atlas.dev.pnnl.gov/api/records/62fqm-1yd04/draft",
+    "files": "https://atlas.dev.pnnl.gov/api/records/62fqm-1yd04/files",
+    "latest": "https://atlas.dev.pnnl.gov/api/records/62fqm-1yd04/versions/latest",
+    "latest_html": "https://atlas.dev.pnnl.gov/records/62fqm-1yd04/latest",
+    "media_files": "https://atlas.dev.pnnl.gov/api/records/62fqm-1yd04/media-files",
+    "parent": "https://atlas.dev.pnnl.gov/api/records/9bh9n-dyp81",
+    "parent_html": "https://atlas.dev.pnnl.gov/records/9bh9n-dyp81",
+    "preview_html": "https://atlas.dev.pnnl.gov/records/62fqm-1yd04?preview=1",
+    "requests": "https://atlas.dev.pnnl.gov/api/records/62fqm-1yd04/requests",
+    "reserve_doi": "https://atlas.dev.pnnl.gov/api/records/62fqm-1yd04/draft/pids/doi",
+    "self": "https://atlas.dev.pnnl.gov/api/records/62fqm-1yd04",
+    "self_html": "https://atlas.dev.pnnl.gov/records/62fqm-1yd04",
+    "self_iiif_manifest": "https://atlas.dev.pnnl.gov/api/iiif/record:62fqm-1yd04/manifest",
+    "self_iiif_sequence": "https://atlas.dev.pnnl.gov/api/iiif/record:62fqm-1yd04/sequence/default",
+    "versions": "https://atlas.dev.pnnl.gov/api/records/62fqm-1yd04/versions"
+  },
+  "media_files": {
+    "count": 0,
+    "enabled": false,
+    "entries": {},
+    "order": [],
+    "total_bytes": 0
+  },
+  "metadata": {
+    "creators": [
+      {
+        "affiliations": [
+          {
+            "name": "Pacific Northwest National Laboratory"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Bracken",
+          "given_name": "Cameron",
+          "identifiers": [
+            {
+              "identifier": "0000-0003-1917-402X",
+              "scheme": "orcid"
+            }
+          ],
+          "name": "Bracken, Cameron",
+          "type": "personal"
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Pacific Northwest National Laboratory"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Son",
+          "given_name": "Youngjun",
+          "identifiers": [
+            {
+              "identifier": "0000-0001-5128-2499",
+              "scheme": "orcid"
+            }
+          ],
+          "name": "Son, Youngjun",
+          "type": "personal"
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Pacific Northwest National Laboratory"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Broman",
+          "given_name": "Daniel",
+          "identifiers": [
+            {
+              "identifier": "0000-0001-8281-3299",
+              "scheme": "orcid"
+            }
+          ],
+          "name": "Broman, Daniel",
+          "type": "personal"
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Pacific Northwest National Laboratory"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Voisin",
+          "given_name": "Nathalie",
+          "identifiers": [
+            {
+              "identifier": "0000-0002-6848-449X",
+              "scheme": "orcid"
+            }
+          ],
+          "name": "Voisin, Nathalie",
+          "type": "personal"
+        }
+      }
+    ],
+    "description": "<div>\n<div>\n<p>This dataset contains monthly and weekly hydropower generation and generation constraints (min power, max power, average daily operational range) for 1,483 hydropower plants in the conterminous United States. It covers a historical period (1982-2019) and a future period (2021-2099) under four warming scenarios.</p>\n<p>For a full description of the modeling chain and validation, see <a href=\"https://doi.org/10.1038/s41597-025-05097-3\">Bracken et al. (2025)</a>, which describes version 1.1 of this dataset. Version 1.2 uses the same models and the same method; the changes are listed under <a href=\"#what-changed-in-120\">What changed in 1.2.0</a> below.</p>\n<h2>Modeling chain</h2>\n<p>Meteorology comes from the perturbed thermodynamics (TGW) experiments (<a href=\"https://tgw-data.msdlive.org/\">https://tgw-data.msdlive.org/</a>), a 1/8th degree dynamically downscaled WRF product over the contiguous U.S. The four future scenarios (rcp45cooler, rcp45hotter, rcp85cooler, rcp85hotter) apply warming signals derived from groups of CMIP6 models to a replicated historical period. Runoff comes from a calibrated VIC model, routing and water management from <a href=\"https://mosartwmpy.readthedocs.io/\">mosartwmpy</a> at 1/8th degree, and hydropower from B1hydro, a per-plant lagged linear regression on routed outflow, inflow, and storage calibrated against the <a href=\"https://github.com/HydroWIRES-PNNL/B1-data\">HydroWIRES B1 data</a>.</p>\n<h2>Data description</h2>\n<p>Ten data files, named <code>&lt;scenario&gt;_&lt;monthly|weekly&gt;.parquet</code>, where <code>&lt;scenario&gt;</code> is <code>hist</code> (historical), <code>rcp45cooler</code>, <code>rcp45hotter</code>, <code>rcp85cooler</code>, or <code>rcp85hotter</code>. <code>monthly</code> or <code>weekly</code> is the timestep.</p>\n<div>\n<table>\n<tbody>\n<tr>\n<th>\n<p>File</p>\n</th>\n<th>\n<p>Rows</p>\n</th>\n<th>\n<p>Plants</p>\n</th>\n<th>\n<p>Period</p>\n</th>\n</tr>\n<tr>\n<td>\n<p><code>hist_monthly.parquet</code></p>\n</td>\n<td>\n<p>676,248</p>\n</td>\n<td>\n<p>1,483</p>\n</td>\n<td>\n<p>1982-2019</p>\n</td>\n</tr>\n<tr>\n<td>\n<p><code>hist_weekly.parquet</code></p>\n</td>\n<td>\n<p>2,966,622</p>\n</td>\n<td>\n<p>1,473</p>\n</td>\n<td>\n<p>1982-2019</p>\n</td>\n</tr>\n<tr>\n<td>\n<p><code>&lt;scenario&gt;_monthly.parquet</code></p>\n</td>\n<td>\n<p>1,405,884</p>\n</td>\n<td>\n<p>1,483</p>\n</td>\n<td>\n<p>2021-2099</p>\n</td>\n</tr>\n<tr>\n<td>\n<p><code>&lt;scenario&gt;_weekly.parquet</code></p>\n</td>\n<td>\n<p>6,167,451</p>\n</td>\n<td>\n<p>1,473</p>\n</td>\n<td>\n<p>2021-2099</p>\n</td>\n</tr>\n</tbody>\n</table>\n<p>&nbsp;</p>\n</div>\n<p>Columns:</p>\n<ul>\n<li>\n<p><code>datetime</code> - Date stamp of the current timestep. First day of the month for monthly data, first day of the week for weekly data.</p>\n</li>\n<li>\n<p><code>eia_id</code> - Integer EIA plant code identifying the facility.</p>\n</li>\n<li>\n<p><code>plant</code> - Name of the facility according to the EIA.</p>\n</li>\n<li>\n<p><code>power_predicted_mwh</code> - Total energy generated over the period in MWh, that is, the energy target.</p>\n</li>\n<li>\n<p><code>n_hours</code> - Number of hours in the period, for converting between power and energy. 672-744 for monthly, 168 for a full week (see <a href=\"#week-definition\">Week definition</a>).</p>\n</li>\n<li>\n<p><code>p_avg</code> - Average power generation for the period, MW.</p>\n</li>\n<li>\n<p><code>p_max</code> - Maximum allowable power generation for the period, MW.</p>\n</li>\n<li>\n<p><code>p_min</code> - Minimum allowable power generation for the period, MW.</p>\n</li>\n<li>\n<p><code>ador</code> - Average daily operational range for the period, MW.</p>\n</li>\n<li>\n<p><code>scenario</code> - Scenario name, matching the file name.</p>\n</li>\n</ul>\n<p>Also included is the metadata file <code>godeeep_hydro_plants.csv</code>, one row per hydropower facility, with these columns:</p>\n<ul>\n<li>\n<p><code>eia_id</code> - Integer EIA plant code identifying the facility.</p>\n</li>\n<li>\n<p><code>plant</code> - Name of the facility according to the EIA.</p>\n</li>\n<li>\n<p><code>mode</code> - <code>Storage</code> or <code>RoR</code>, whether the plant is primarily operated as a storage or run-of-river facility.</p>\n</li>\n<li>\n<p><code>state</code> - Two letter U.S. state abbreviation.</p>\n</li>\n<li>\n<p><code>lat</code> - Latitude of the facility.</p>\n</li>\n<li>\n<p><code>lon</code> - Longitude of the facility.</p>\n</li>\n<li>\n<p><code>nameplate_capacity</code> - Total nameplate capacity of the facility in MW, according to the EIA.</p>\n</li>\n<li>\n<p><code>nerc_region</code> - Four letter code for the NERC region of the facility.</p>\n</li>\n<li>\n<p><code>ba</code> - Balancing authority of the facility.</p>\n</li>\n<li>\n<p><code>max_param</code> - Value of the a_max parameter used to derive <code>p_max</code>.</p>\n</li>\n<li>\n<p><code>min_param</code> - Value of the a_min parameter used to derive <code>p_min</code>.</p>\n</li>\n<li>\n<p><code>ador_param</code> - Value of the a_ador parameter used to derive <code>ador</code>.</p>\n</li>\n<li>\n<p><code>huc2</code> - the two digit hydrologic unit code containing the facility</p>\n</li>\n</ul>\n<h3>Reading the data</h3>\n<p>Version 1.2 is distributed as <a href=\"https://parquet.apache.org/\">Apache Parquet</a> rather than CSV. The ten files total 1.2 GB. Unlike CSV, Parquet can be accessed per-column, and columns are typed so there is no ambiguity between date, floating point, integer, or character columns when reading the data</p>\n<p>Python:</p>\n<pre><code>import pandas as pd\ndf = pd.read_parquet(\"hist_monthly.parquet\")</code></pre>\n<p>R:</p>\n<pre><code>library(arrow)\ndf &lt;- read_parquet(\"hist_monthly.parquet\")</code></pre>\n<p>To read a subset without loading the whole file, use <code>pyarrow</code>/<code>arrow</code>, <code>pyarrow.dataset</code> or <code>arrow::open_dataset()</code> and filter before collecting.</p>\n<h3>Week definition</h3>\n<p>Weekly data uses 53 weeks per calendar year. Weeks start on January 1 and run in 7 day blocks, so the 53rd week of each year is short: 24 hours in a common year and 48 in a leap year. Read <code>n_hours</code> rather than assuming 168 when converting between energy and average power.</p>\n<h2>What changed in 1.2.0</h2>\n<p>Changes that affect the data:</p>\n<ul>\n<li>\n<p><strong>Two predictors removed from the regression.</strong> the year and month terms were used as predictors in 1.1 which was not intended, this has been fixed.</p>\n</li>\n<li>\n<p><strong>Continuous future scenarios.</strong> Each future scenario is now a single continuous 2021-2099 record. In 1.1 the mid century (2020-2059) and end of century (2060-2099) segments were separate. Note that the routing simulations were still initialized separately for the two segments, so a model state discontinuity remains at the 2059/2060 boundary.</p>\n</li>\n<li>\n<p><strong>Water demand consistent across scenarios.</strong> The routing simulations now use a fixed 2010 GCAM water demand in every scenario. In 1.1, projected water demands were used which was not intended.</p>\n</li>\n<li>\n<p><strong>31 plants added</strong>, for 1,483 total (1,452 in 1.1), adding 476 MW of nameplate capacity. No plants were dropped. The added plants are small, with a median nameplate of 8.5 MW. These were previously dropped due to numerical issues.</p>\n</li>\n<li>\n<p><strong>Lagged predictors stored at full precision.</strong> In 1.1 they were rounded to two decimals, which caused compounding rounding error over time.</p>\n</li>\n</ul>\n<p>Changes to the file format:</p>\n<ul>\n<li>\n<p><strong>Parquet instead of CSV</strong>, and one file per scenario and timestep instead of a single zip archive. See <a href=\"#reading-the-data\">Reading the data</a>.</p>\n</li>\n<li>\n<p><strong>The historical scenario is named <code>hist</code>, not <code>historical</code></strong>, in both the file names and the <code>scenario</code> column. This will break code written against 1.1 that matches on the scenario string.</p>\n</li>\n</ul>\n<h3>Known limitations</h3>\n<p>Conduit and aqueduct plants are not well represented. Their generation follows managed water deliveries (municipal supply, canal schedules) rather than routed river flow, which the routing model does not simulate, so there is little signal in the flow at their grid cells. Seven such plants in the Los Angeles basin, all under 11 MW, had weekly cross validated KGE below -1 and are excluded from the weekly files: Venice (72), Sepulveda Canyon (316), Foothill (396), Franklin (397), San Fernando (403), Azusa (6449), and Sawtelle (7077). Monthly aggregation largely recovers them, so they remain in the monthly files. Three plants with known-bad weekly calibration data (7224, 7229, 7372) are also excluded from the weekly files. This accounts for the 1,473 plants in the weekly files against 1,483 monthly.</p>\n<p>The min power, max power, and ador constraints are derived from hourly generation data for federally operated plants in the Columbia River basin, the one U.S. region where such data is public. Outside the Pacific Northwest these constraints are mode averages (run-of-river or storage) and should be treated as approximations.</p>\n<h2>Citation</h2>\n<p>Please cite both the paper and this dataset version:</p>\n<ul>\n<li>Bracken, C., Son, Y., Broman, D., and Voisin, N. (2025). GODEEEP-hydro: Historical and projected power system ready hydropower data for the United States. <em>Scientific Data</em> 12, 875. https://doi.org/10.1038/s41597-025-05097-3</li>\n<li>Bracken, C., Son, Y., Broman, D., and Voisin, N. (2026). GODEEEP-hydro: Historical and projected power system ready hydropower data for the United States (v1.2.0) [Data set]. Zenodo.</li>\n</ul>\n<p>The DOI <a href=\"https://doi.org/10.5281/zenodo.13776944\">https://doi.org/10.5281/zenodo.13776944</a> always resolves to the latest version.</p>\n<h2>Funding</h2>\n<p>Versions 1.0 and 1.1 of this dataset were supported by the GODEEEP project, under the Laboratory Directed Research and Development (LDRD) Program at Pacific Northwest National Laboratory (PNNL). Version 1.2 was supported by the FORESIGHT LDRD and the CCHED project from the DOE H2O office.</p>\n<p>PNNL is a multi-program national laboratory operated for the U.S. Department of Energy (DOE) by Battelle Memorial Institute under Contract No. DE-AC05-76RL01830.</p>\n<p>Corresponding author: Cameron Bracken, cameron.bracken@pnnl.gov</p>\n</div>\n</div>",
+    "languages": [
+      {
+        "id": "eng",
+        "title": {
+          "en": "English"
+        }
+      }
+    ],
+    "publication_date": "2026-09-23",
+    "publisher": "Pacific Northwest National Laboratory",
+    "references": [
+      {
+        "reference": "Bracken, C., Son, Y., Broman, D., and Voisin, N. (2025). GODEEEP-hydro: Historical and projected power system ready hydropower data for the United States. Scientific Data 12, 875. https://doi.org/10.1038/s41597-025-05097-3"
+      }
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.5281/zenodo.17873037",
+        "relation_type": {
+          "id": "ismetadatafor",
+          "title": {
+            "cs": "Je metadaty pro",
+            "de": "Hat Metadaten f\u00fcr",
+            "en": "Is metadata for",
+            "sv": "\u00c4r metadata f\u00f6r"
+          }
+        },
+        "resource_type": {
+          "id": "dataset",
+          "title": {
+            "cs": "Datov\u00e1 sada",
+            "de": "Datensatz",
+            "en": "Dataset",
+            "sv": "Dataset"
+          }
+        },
+        "scheme": "doi"
+      },
+      {
+        "identifier": "https://code.pnnl.gov/grid-hydro/godeeep-hydro",
+        "relation_type": {
+          "id": "requires",
+          "title": {
+            "cs": "Po\u017eaduje (co)",
+            "de": "Setzt voraus",
+            "en": "Requires",
+            "sv": "Kr\u00e4ver"
+          }
+        },
+        "resource_type": {
+          "id": "software",
+          "title": {
+            "cs": "Software",
+            "de": "Software",
+            "en": "Software",
+            "sv": "Mjukvara"
+          }
+        },
+        "scheme": "url"
+      },
+      {
+        "identifier": "10.1038/s41597-023-02485-5",
+        "relation_type": {
+          "id": "isreferencedby",
+          "title": {
+            "cs": "Je na n\u011bj odkazov\u00e1no z (\u010deho)",
+            "de": "Wird referenziert von",
+            "en": "Is referenced by",
+            "sv": "H\u00e4nvisas till av"
+          }
+        },
+        "resource_type": {
+          "id": "publication-article",
+          "title": {
+            "cs": "\u010cl\u00e1nek v \u010dasopise",
+            "de": "Zeitschriftenartikel",
+            "en": "Journal article",
+            "sv": "Tidskriftsartikel"
+          }
+        },
+        "scheme": "doi"
+      }
+    ],
+    "resource_type": {
+      "id": "dataset",
+      "title": {
+        "cs": "Datov\u00e1 sada",
+        "de": "Datensatz",
+        "en": "Dataset",
+        "sv": "Dataset"
+      }
+    },
+    "rights": [
+      {
+        "description": {
+          "en": "CC0 waives copyright interest in a work you've created and dedicates it to the world-wide public domain. Use CC0 to opt out of copyright entirely and ensure your work has the widest reach."
+        },
+        "icon": "cc-cc0-icon",
+        "id": "cc0-1.0",
+        "props": {
+          "scheme": "spdx",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        },
+        "title": {
+          "en": "Creative Commons Zero v1.0 Universal"
+        }
+      }
+    ],
+    "subjects": [
+      {
+        "id": "http://www.oecd.org/science/inno/38235147.pdf?1.5",
+        "scheme": "FOS",
+        "subject": "Earth and related environmental sciences"
+      }
+    ],
+    "title": "GODEEEP-hydro - Historical and projected power system ready hydropower data for the United States"
+  },
+  "parent": {
+    "access": {
+      "grants": [],
+      "links": [],
+      "owned_by": {
+        "user": "10"
+      },
+      "settings": {
+        "accept_conditions_text": null,
+        "allow_guest_requests": false,
+        "allow_user_requests": false,
+        "secret_link_expiration": 0
+      }
+    },
+    "communities": {
+      "default": "3c804337-7c49-428c-9b8f-872a330a89f0",
+      "entries": [
+        {
+          "access": {
+            "member_policy": "open",
+            "members_visibility": "public",
+            "record_submission_policy": "open",
+            "review_policy": "closed",
+            "visibility": "public"
+          },
+          "children": {
+            "allow": false
+          },
+          "created": "2026-09-15T18:31:44.402402+00:00",
+          "custom_fields": {},
+          "deletion_status": {
+            "is_deleted": false,
+            "status": "P"
+          },
+          "id": "3c804337-7c49-428c-9b8f-872a330a89f0",
+          "links": {},
+          "metadata": {
+            "title": "Grid Hydro"
+          },
+          "revision_id": 2,
+          "slug": "gridhydro",
+          "updated": "2026-09-15T18:31:46.088467+00:00"
+        }
+      ],
+      "ids": [
+        "3c804337-7c49-428c-9b8f-872a330a89f0"
+      ]
+    },
+    "id": "9bh9n-dyp81",
+    "pids": {}
+  },
+  "pids": {
+    "oai": {
+      "identifier": "oai:rdm-app.com:62fqm-1yd04",
+      "provider": "oai"
+    }
+  },
+  "revision_id": 6,
+  "stats": {
+    "all_versions": {
+      "data_volume": 0.0,
+      "downloads": 0,
+      "unique_downloads": 0,
+      "unique_views": 1,
+      "views": 2
+    },
+    "this_version": {
+      "data_volume": 0.0,
+      "downloads": 0,
+      "unique_downloads": 0,
+      "unique_views": 0,
+      "views": 0
+    }
+  },
+  "status": "published",
+  "updated": "2026-09-22T20:36:06.315806+00:00",
+  "versions": {
+    "index": 2,
+    "is_latest": true,
+    "is_latest_draft": true
+  }
+}
