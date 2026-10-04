@@ -45,10 +45,10 @@ def get_or_create_community(community_name):
 
         if len(results) > 0:
             community_id = results[0]["id"]
-            print(f"  ✓ Using existing community: {display_title} (ID: {community_id})")
+            print(f"  Using existing community: {display_title} (ID: {community_id})")
             return community_id
     except Exception as e:
-        print(f"  ⚠ Could not search for community: {str(e)}")
+        print(f"  Could not search for community: {str(e)}")
 
     # Create new community if it doesn't exist
     try:
@@ -71,11 +71,11 @@ def get_or_create_community(community_name):
             uow.commit()
 
         community_id = community.id
-        print(f"  ✓ Created new community: {display_title} (ID: {community_id})")
+        print(f"  Created new community: {display_title} (ID: {community_id})")
         return community_id
 
     except Exception as e:
-        print(f"  ✗ Failed to create community {display_title}: {str(e)}")
+        print(f"  Failed to create community {display_title}: {str(e)}")
         return None
 
 
@@ -131,28 +131,34 @@ def sanitize_record(record_data, enable_files=False, community_id=None):
     return result
 
 
-def create_and_publish(record_data, enable_files=False):
-    """Create + publish a single record inside a unit of work."""
+def create_draft(record_data):
+    """Create a draft record."""
     with UnitOfWork(db.session) as uow:
         draft = current_rdm_records_service.create(
             system_identity, record_data, uow=uow
         )
+        uow.commit()
 
+    return draft
+
+
+def publish_draft(draft_id):
+    """Publish a draft record."""
+    with UnitOfWork(db.session) as uow:
         record = current_rdm_records_service.publish(
-            system_identity, draft.id, uow=uow
+            system_identity, draft_id, uow=uow
         )
-
         uow.commit()
 
     return record
 
 
-def upload_files_from_zip(record_id, zip_path):
+def upload_files_from_zip(draft_id, zip_path):
     """
-    Extract files from a zip archive and upload them to a record.
+    Extract files from a zip archive and upload them to a draft record.
 
     Args:
-        record_id: The ID of the published record
+        draft_id: The ID of the draft record
         zip_path: Path to the zip file
 
     Returns:
@@ -186,36 +192,40 @@ def upload_files_from_zip(record_id, zip_path):
 
                     try:
                         with open(file_path, 'rb') as f:
-                            # Use the files service to add file to record
-                            current_rdm_records_service.files.init_files(
-                                system_identity,
-                                record_id,
-                                files=[{
-                                    "key": Path(file_name).name,  # Use just the filename
-                                }]
-                            )
+                            # Initialize files on the draft if not already done
+                            try:
+                                current_rdm_records_service.files.init_files(
+                                    system_identity,
+                                    draft_id,
+                                    files=[{
+                                        "key": Path(file_name).name,
+                                    }]
+                                )
+                            except Exception:
+                                # Files might already be initialized, continue
+                                pass
 
                             # Upload the file content
                             current_rdm_records_service.files.upload_file(
                                 system_identity,
-                                record_id,
+                                draft_id,
                                 Path(file_name).name,
                                 f
                             )
 
                             uploaded_files.append(Path(file_name).name)
-                            print(f"    ✔ Uploaded: {Path(file_name).name}")
+                            print(f"    Uploaded: {Path(file_name).name}")
 
                     except Exception as e:
-                        print(f"    ✖ Failed to upload {file_name}: {str(e)}")
+                        print(f"    Failed to upload {file_name}: {str(e)}")
 
         if uploaded_files:
-            print(f"  ✔ Successfully uploaded {len(uploaded_files)} file(s)")
+            print(f"  Successfully uploaded {len(uploaded_files)} file(s)")
 
     except zipfile.BadZipFile:
-        print(f"  ✖ Invalid zip file: {zip_path.name}")
+        print(f"  Invalid zip file: {zip_path.name}")
     except Exception as e:
-        print(f"  ✖ Error processing zip file: {str(e)}")
+        print(f"  Error processing zip file: {str(e)}")
         traceback.print_exc()
 
     return uploaded_files
@@ -255,7 +265,7 @@ def ingest_all_records():
 
             # Check cache first
             if community_name not in communities_cache:
-                print(f"\n📁 Processing community: {community_name}")
+                print(f"\n Processing community: {community_name}")
                 comm_id = get_or_create_community(community_name)
                 communities_cache[community_name] = comm_id
 
@@ -275,12 +285,17 @@ def ingest_all_records():
 
             cleaned_data = sanitize_record(raw_data, enable_files=has_files, community_id=community_id)
 
-            record = create_and_publish(cleaned_data, enable_files=has_files)
+            # Step 1: Create draft
+            draft = create_draft(cleaned_data)
+            print(f"  ➡ Draft created (ID: {draft.id})")
 
-            # Upload files from zip if it exists
+            # Step 2: Upload files from zip if it exists
             uploaded_files = []
             if has_files:
-                uploaded_files = upload_files_from_zip(record.id, zip_file)
+                uploaded_files = upload_files_from_zip(draft.id, zip_file)
+
+            # Step 3: Publish the draft after files are uploaded
+            record = publish_draft(draft.id)
 
             results.append({
                 "source_file": json_file.name,
@@ -289,10 +304,10 @@ def ingest_all_records():
                 "files_uploaded": len(uploaded_files),
                 "community": community_name
             })
-            print(f"✔ Success: {json_file.name} -> Record ID: {record.id}\n")
+            print(f"Success: {json_file.name} -> Record ID: {record.id}\n")
 
         except Exception as e:
-            print(f"✖ Failed: {json_file.name}")
+            print(f"Failed: {json_file.name}")
             print(f"  Error: {str(e)}\n")
             traceback.print_exc()
             failed.append(json_file.name)
@@ -300,10 +315,10 @@ def ingest_all_records():
     # Print summary
     print(f"\n{'='*60}")
     print(f"Import Summary:")
-    print(f"  ✔ Successfully imported: {len(results)}")
-    print(f"  ✖ Failed imports: {len(failed)}")
+    print(f"  Successfully imported: {len(results)}")
+    print(f"  Failed imports: {len(failed)}")
     if communities_cache:
-        print(f"  📁 Communities created/used: {len(communities_cache)}")
+        print(f"   Communities created/used: {len(communities_cache)}")
     print(f"{'='*60}")
 
     if results:
