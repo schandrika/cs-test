@@ -3,14 +3,14 @@
 Add existing published records to a community.
 
 Usage:
-    pipenv run invenio shell add_records_to_community.py <community_slug> <ids_file>
+    pipenv run invenio shell add-records-to-community.py <community_slug> <ids_file>
 
 Arguments:
     community_slug  The slug of the target community (e.g. 'grid-hydro')
     ids_file        Path to a file with one record ID per line
 
 Example:
-    pipenv run invenio shell add_records_to_community.py grid-hydro record_ids.txt
+    pipenv run invenio shell add-records-to-community.py grid-hydro record_ids.txt
 """
 
 import os
@@ -132,4 +132,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
