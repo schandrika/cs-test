@@ -1,11 +1,31 @@
 #!/usr/bin/env python
 """
 Import datasets into Invenio RDM from JSON files.
-Reads JSON files from ./records directory and creates/publishes records.
-If a .zip file with the same base name exists, uploads files from the zip.
+
+Reads JSON files from the ./records directory and creates/publishes records.
+If a .zip file with the same base name exists, files in the zip are uploaded
+to the record before publishing.
+
+Subfolders under ./records are treated as communities. If a subfolder exists,
+a community is created (or reused if it already exists) using the folder name
+as the slug and a title-cased version of the name as the display title.
+Records inside the subfolder are added to that community.
+
+Directory structure example:
+    records/
+        dataset-1.json              <- published with no files, no community
+        dataset-2.json              <- published with files, no community
+        dataset-2.zip
+        grid-hydro/                 <- creates/reuses community "Grid Hydro"
+            dataset-3.json
+            dataset-3.zip           <- files uploaded to dataset-3
+
+If the folder contains zip files that need to be uploaded into s3, then AWS credentials must be set
+in the environment before running. Use AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY,
+AWS_SESSION_TOKEN (if using temporary SSO credentials), and AWS_DEFAULT_REGION.
 
 Usage:
-    python import_datasets.py
+    pipenv run invenio shell import_datasets.py
 """
 
 import json
@@ -14,11 +34,12 @@ import zipfile
 import tempfile
 from pathlib import Path
 
-from invenio_rdm_records.proxies import current_rdm_records_service
+from invenio_rdm_records.proxies import current_rdm_records_service, current_record_communities_service
 from invenio_communities.proxies import current_communities
 from invenio_access.permissions import system_identity
 from invenio_db import db
 from invenio_records_resources.services.uow import UnitOfWork
+from invenio_search import current_search_client
 
 
 def get_or_create_community(community_name):
@@ -44,9 +65,9 @@ def get_or_create_community(community_name):
         )
 
         for hit in results:
-            community_id = hit["id"]
-            print(f"  Using existing community: {display_title} (ID: {community_id})")
-            return community_id
+            community_slug = hit["slug"]
+            print(f"  Using existing community: {display_title} (slug: {community_slug})")
+            return community_slug
     except Exception as e:
         print(f"  Could not search for community: {str(e)}")
 
@@ -71,17 +92,16 @@ def get_or_create_community(community_name):
             )
             uow.commit()
 
-        community_id = community.id
-        print(
-            f"  Created new community: {display_title} (ID: {community_id})")
-        return community_id
+        community_slug = community["slug"]
+        print(f"  Created new community: {display_title} (slug: {community_slug})")
+        return community_slug
 
     except Exception as e:
         print(f"  Failed to create community {display_title}: {str(e)}")
         return None
 
 
-def sanitize_record(record_data, enable_files=False, community_id=None):
+def sanitize_record(record_data, enable_files=False):
     """
     Convert exported Invenio JSON into a minimal valid create payload.
     This removes all system-managed / invalid fields.
@@ -89,7 +109,6 @@ def sanitize_record(record_data, enable_files=False, community_id=None):
     Args:
         record_data: The raw record data from JSON
         enable_files: Whether to enable files for this record (default: False)
-        community_id: Optional community ID to add record to
     """
 
     metadata = record_data.get("metadata", {})
@@ -126,11 +145,37 @@ def sanitize_record(record_data, enable_files=False, community_id=None):
         }
     }
 
-    # Add community if provided
-    if community_id:
-        result["communities"] = [{"id": community_id}]
-
     return result
+
+
+def add_record_to_community(record_id, community_slug):
+    """
+    Add a published record directly to a community without a review request.
+
+    Uses the add method with require_review=False which goes through the full
+    community_inclusion_service.include() path, persisting the community
+    membership to the parent record immediately.
+
+    Args:
+        record_id: The PID of the published record (e.g. 'n2806-b2m95')
+        community_slug: The slug of the community (e.g. 'grid-hydro')
+    """
+    # add() is decorated with @unit_of_work() so it manages its own transaction
+    processed, errors = current_record_communities_service.add(
+        system_identity,
+        record_id,
+        data={"communities": [{"id": community_slug, "require_review": False}]}
+    )
+
+    if errors:
+        print(f"  Warning: Community add errors: {errors}")
+    else:
+        print(f"  Added to community: {community_slug}")
+        # Force index refresh so the record appears in the community immediately
+        try:
+            current_search_client.indices.refresh(index="*")
+        except Exception as e:
+            print(f"  Warning: Index refresh failed: {str(e)}")
 
 
 def create_draft(record_data):
@@ -284,7 +329,7 @@ def ingest_all_records():
         # Determine if this file is in a subfolder (community)
         relative_path = json_file.relative_to(records_dir)
         community_name = None
-        community_id = None
+        community_slug = None
 
         # If file is in a subfolder, use folder name as community
         if len(relative_path.parts) > 1:
@@ -293,10 +338,10 @@ def ingest_all_records():
             # Check cache first
             if community_name not in communities_cache:
                 print(f"\nProcessing community: {community_name}")
-                comm_id = get_or_create_community(community_name)
-                communities_cache[community_name] = comm_id
+                slug = get_or_create_community(community_name)
+                communities_cache[community_name] = slug
 
-            community_id = communities_cache[community_name]
+            community_slug = communities_cache[community_name]
 
         print(f"➡ Processing {json_file.name}")
         if community_name:
@@ -311,7 +356,7 @@ def ingest_all_records():
                 raw_data = json.load(f)
 
             cleaned_data = sanitize_record(
-                raw_data, enable_files=has_files, community_id=community_id)
+                raw_data, enable_files=has_files)
 
             # Step 1: Create draft
             draft = create_draft(cleaned_data)
@@ -329,6 +374,13 @@ def ingest_all_records():
             # Step 3: Publish the draft after files are uploaded
             record = publish_draft(draft.id)
 
+            # Step 4: Add to community after publishing (bypasses review)
+            if community_slug:
+                try:
+                    add_record_to_community(record.id, community_slug)
+                except Exception as e:
+                    print(f"  Warning: Could not add to community: {str(e)}")
+
             results.append({
                 "source_file": json_file.name,
                 "record_id": record.id,
@@ -336,7 +388,10 @@ def ingest_all_records():
                 "files_uploaded": len(uploaded_files),
                 "community": community_name
             })
-            print(f"Success: {json_file.name} -> Record ID: {record.id}\n")
+            print(f"Success: {json_file.name} -> Record ID: {record.id}")
+            if community_slug:
+                print(f"  Community: {community_slug}")
+            print()
 
         except Exception as e:
             print(f"Failed: {json_file.name}")
@@ -371,3 +426,4 @@ def ingest_all_records():
 
 if __name__ == "__main__":
     ingest_all_records()
+
