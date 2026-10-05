@@ -43,10 +43,9 @@ def get_or_create_community(community_name):
             params={"q": f"slug:{community_name}"}
         )
 
-        if len(results) > 0:
-            community_id = results[0]["id"]
-            print(
-                f"  Using existing community: {display_title} (ID: {community_id})")
+        for hit in results:
+            community_id = hit["id"]
+            print(f"  Using existing community: {display_title} (ID: {community_id})")
             return community_id
     except Exception as e:
         print(f"  Could not search for community: {str(e)}")
@@ -205,35 +204,41 @@ def upload_files_from_zip(draft_id, zip_path):
                     print(f"  No files to upload in zip")
                     return uploaded_files
 
-                # Initialize files on draft (data is positional, not a kwarg)
+                # Initialize files on draft inside a UnitOfWork
+                # NOTE: use draft_files (not files) — files is for published records
                 try:
-                    current_rdm_records_service.files.init_files(
-                        system_identity,
-                        draft_id,
-                        files_to_init
-                    )
+                    with UnitOfWork(db.session) as uow:
+                        current_rdm_records_service.draft_files.init_files(
+                            system_identity,
+                            draft_id,
+                            files_to_init,
+                            uow=uow
+                        )
+                        uow.commit()
                 except Exception as e:
                     print(f"  Could not initialize files: {str(e)}")
                     return uploaded_files
 
-                # Upload and commit each file
+                # Upload and commit each file inside a UnitOfWork
                 for clean_filename, file_path in file_mapping.items():
                     try:
-                        with open(file_path, 'rb') as fp:
-                            current_rdm_records_service.files.set_file_content(
+                        with UnitOfWork(db.session) as uow:
+                            with open(file_path, 'rb') as fp:
+                                current_rdm_records_service.draft_files.set_file_content(
+                                    system_identity,
+                                    draft_id,
+                                    clean_filename,
+                                    fp,
+                                    content_length=file_path.stat().st_size,
+                                    uow=uow
+                                )
+                            current_rdm_records_service.draft_files.commit_file(
                                 system_identity,
                                 draft_id,
                                 clean_filename,
-                                fp,
-                                content_length=file_path.stat().st_size
+                                uow=uow
                             )
-
-                        # Commit the file to finalize the upload
-                        current_rdm_records_service.files.commit_file(
-                            system_identity,
-                            draft_id,
-                            clean_filename
-                        )
+                            uow.commit()
 
                         uploaded_files.append(clean_filename)
                         print(f"    Uploaded: {clean_filename}")
@@ -316,6 +321,10 @@ def ingest_all_records():
             uploaded_files = []
             if has_files:
                 uploaded_files = upload_files_from_zip(draft.id, zip_file)
+                if not uploaded_files:
+                    raise Exception(
+                        f"File upload failed for {zip_file.name} — not publishing draft {draft.id}"
+                    )
 
             # Step 3: Publish the draft after files are uploaded
             record = publish_draft(draft.id)
