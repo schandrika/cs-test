@@ -25,7 +25,7 @@ in the environment before running. Use AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY,
 AWS_SESSION_TOKEN (if using temporary SSO credentials), and AWS_DEFAULT_REGION.
 
 Usage:
-    pipenv run invenio shell import_datasets.py
+    pipenv run invenio shell import-datasets.py
 """
 
 import json
@@ -426,4 +426,3 @@ def ingest_all_records():
 
 if __name__ == "__main__":
     ingest_all_records()
-
