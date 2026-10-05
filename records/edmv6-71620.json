@@ -1,0 +1,776 @@
+{
+  "access": {
+    "embargo": {
+      "active": false,
+      "reason": null
+    },
+    "files": "public",
+    "record": "public",
+    "status": "open"
+  },
+  "created": "2026-09-15T16:19:38.313567+00:00",
+  "custom_fields": {
+    "has_manifest": false
+  },
+  "deletion_status": {
+    "is_deleted": false,
+    "status": "P"
+  },
+  "files": {
+    "count": 24,
+    "enabled": true,
+    "entries": {
+      "GC-12.47-1.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:10cffe61418a621fd0cdcd9b09df1b3f",
+        "ext": "glm",
+        "id": "7384aa1e-5b31-464c-8ad0-17307b53bcd4",
+        "key": "GC-12.47-1.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/GC-12.47-1.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/GC-12.47-1.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 17201,
+        "storage_class": "L"
+      },
+      "R1-12.47-1.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:8582edb6d15c7cca4224dc47493a3e02",
+        "ext": "glm",
+        "id": "45df4890-a7ef-4993-a4f3-b59f543536ad",
+        "key": "R1-12.47-1.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R1-12.47-1.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R1-12.47-1.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 852900,
+        "storage_class": "L"
+      },
+      "R1-12.47-2.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:90ca61bbc6f9031b5c66e352a997bd3e",
+        "ext": "glm",
+        "id": "e4f9aafc-cf2f-4335-ae73-d106ea6c3e54",
+        "key": "R1-12.47-2.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R1-12.47-2.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R1-12.47-2.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 400580,
+        "storage_class": "L"
+      },
+      "R1-12.47-3.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:caf2d274e3878db98ff15aa29bfcb493",
+        "ext": "glm",
+        "id": "b6063306-87bf-40e0-bb72-73d352b4a993",
+        "key": "R1-12.47-3.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R1-12.47-3.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R1-12.47-3.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 45020,
+        "storage_class": "L"
+      },
+      "R1-12.47-4.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:587dd6d1d16e416d699377ca78a94ba5",
+        "ext": "glm",
+        "id": "e70d3dd8-5086-4802-ac31-cc5944fe49fa",
+        "key": "R1-12.47-4.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R1-12.47-4.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R1-12.47-4.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 173251,
+        "storage_class": "L"
+      },
+      "R1-25.00-1.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:090aac9c110fa6a74dae81d84004d83c",
+        "ext": "glm",
+        "id": "adead413-8498-437a-9813-49d677198f95",
+        "key": "R1-25.00-1.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R1-25.00-1.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R1-25.00-1.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 225881,
+        "storage_class": "L"
+      },
+      "R2-12.47-1.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:be98ca971c7a5cca124968f4e664e02a",
+        "ext": "glm",
+        "id": "00d9f8d1-57c0-480e-8465-5af4ecc351b8",
+        "key": "R2-12.47-1.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R2-12.47-1.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R2-12.47-1.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 372149,
+        "storage_class": "L"
+      },
+      "R2-12.47-2.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:bf58efc5c86be46f1547042bf7d35df0",
+        "ext": "glm",
+        "id": "4ad1fd87-21e1-4bdf-930d-102b2bb0e740",
+        "key": "R2-12.47-2.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R2-12.47-2.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R2-12.47-2.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 319718,
+        "storage_class": "L"
+      },
+      "R2-12.47-3.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:7b1da8562d261bb3589d97beaaaaa9d0",
+        "ext": "glm",
+        "id": "a6abed78-42e5-4796-818e-c80421c301b3",
+        "key": "R2-12.47-3.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R2-12.47-3.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R2-12.47-3.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 818846,
+        "storage_class": "L"
+      },
+      "R2-25.00-1.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:6bf6cab1a0fcb7c467d439d7b8645798",
+        "ext": "glm",
+        "id": "c1254afd-f562-4807-b84d-ee440e24dcdf",
+        "key": "R2-25.00-1.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R2-25.00-1.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R2-25.00-1.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 423040,
+        "storage_class": "L"
+      },
+      "R2-35.00-1.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:97355ea09e368f39a4ed20096ddbe8c7",
+        "ext": "glm",
+        "id": "399712d4-c1f2-4fb5-afb7-f2b1e6d989e6",
+        "key": "R2-35.00-1.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R2-35.00-1.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R2-35.00-1.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 922186,
+        "storage_class": "L"
+      },
+      "R3-12.47-1.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:004cc28d98a8111458f444023de8bd41",
+        "ext": "glm",
+        "id": "11e23772-6faf-4998-b0bd-98808407a72a",
+        "key": "R3-12.47-1.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R3-12.47-1.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R3-12.47-1.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 741459,
+        "storage_class": "L"
+      },
+      "R3-12.47-2.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:a746fc986953a2bd6ced9c8436cd7be3",
+        "ext": "glm",
+        "id": "7a631372-13a3-4f64-b3c9-85edc4531c92",
+        "key": "R3-12.47-2.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R3-12.47-2.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R3-12.47-2.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 159728,
+        "storage_class": "L"
+      },
+      "R3-12.47-3.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:130eb87c26166fe1f78c238be458197d",
+        "ext": "glm",
+        "id": "8c80c8dc-3442-4a54-aa10-fa874f0c11c0",
+        "key": "R3-12.47-3.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R3-12.47-3.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R3-12.47-3.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 2503038,
+        "storage_class": "L"
+      },
+      "R4-12.47-1.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:93dcd10b2a5a4dea37ae48221a6004bf",
+        "ext": "glm",
+        "id": "e1386dd4-6dd4-4e0c-9327-c7090afb6bfe",
+        "key": "R4-12.47-1.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R4-12.47-1.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R4-12.47-1.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 769537,
+        "storage_class": "L"
+      },
+      "R4-12.47-2.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:a4cbff686b7b46989367904f5a6963d6",
+        "ext": "glm",
+        "id": "1ce6ddcf-e039-40b2-9a35-9d26c686af3d",
+        "key": "R4-12.47-2.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R4-12.47-2.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R4-12.47-2.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 310748,
+        "storage_class": "L"
+      },
+      "R4-25.00-1.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:1e286601ceebe18c678f9580c06d86f3",
+        "ext": "glm",
+        "id": "37c09283-5832-4beb-815c-54ab10ed91c7",
+        "key": "R4-25.00-1.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R4-25.00-1.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R4-25.00-1.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 231490,
+        "storage_class": "L"
+      },
+      "R5-12.47-1.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:0e535cb78e8a08e7bf01a31dfdecd4b0",
+        "ext": "glm",
+        "id": "99472d70-b583-4802-b2c3-41f09aa4a4f1",
+        "key": "R5-12.47-1.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R5-12.47-1.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R5-12.47-1.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 349762,
+        "storage_class": "L"
+      },
+      "R5-12.47-2.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:8683874d0b5982b703eb4058615ece43",
+        "ext": "glm",
+        "id": "ec09cd8c-a0cc-44a5-9c57-3ddb06303209",
+        "key": "R5-12.47-2.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R5-12.47-2.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R5-12.47-2.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 316475,
+        "storage_class": "L"
+      },
+      "R5-12.47-3.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:736671a941975b86e727ac679227d721",
+        "ext": "glm",
+        "id": "8655ea71-e8d7-419b-a76e-297d33b092f8",
+        "key": "R5-12.47-3.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R5-12.47-3.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R5-12.47-3.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 1882883,
+        "storage_class": "L"
+      },
+      "R5-12.47-4.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:3e6ee14f21529b92c2f887e6d4f51dc2",
+        "ext": "glm",
+        "id": "92f2346b-ad5f-4cf6-ad46-a23700188f51",
+        "key": "R5-12.47-4.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R5-12.47-4.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R5-12.47-4.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 466689,
+        "storage_class": "L"
+      },
+      "R5-12.47-5.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:0c2fb18aba02298517d1c8651badd545",
+        "ext": "glm",
+        "id": "1157b36f-785d-4560-a2a4-b506663ee273",
+        "key": "R5-12.47-5.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R5-12.47-5.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R5-12.47-5.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 792805,
+        "storage_class": "L"
+      },
+      "R5-25.00-1.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:e09d0d3660a4005dd57f008e1d5dc722",
+        "ext": "glm",
+        "id": "c7fb5009-3668-4100-9402-986c18e59e7a",
+        "key": "R5-25.00-1.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R5-25.00-1.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R5-25.00-1.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 756977,
+        "storage_class": "L"
+      },
+      "R5-35.00-1.glm": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:6d01a8e271a5c5591c6a5a64a28992c4",
+        "ext": "glm",
+        "id": "8aef2fd6-4d12-49ff-8292-6c44687e5df6",
+        "key": "R5-35.00-1.glm",
+        "links": {
+          "content": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R5-35.00-1.glm/content",
+          "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files/R5-35.00-1.glm"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 366494,
+        "storage_class": "L"
+      }
+    },
+    "order": [],
+    "total_bytes": 14218857
+  },
+  "id": "edmv6-71620",
+  "is_draft": false,
+  "is_published": true,
+  "links": {
+    "access": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/access",
+    "access_grants": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/access/grants",
+    "access_groups": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/access/groups",
+    "access_links": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/access/links",
+    "access_request": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/access/request",
+    "access_users": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/access/users",
+    "archive": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files-archive",
+    "archive_media": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/media-files-archive",
+    "communities": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/communities",
+    "communities-suggestions": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/communities-suggestions",
+    "draft": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/draft",
+    "files": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/files",
+    "latest": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/versions/latest",
+    "latest_html": "https://atlas.dev.pnnl.gov/records/edmv6-71620/latest",
+    "media_files": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/media-files",
+    "parent": "https://atlas.dev.pnnl.gov/api/records/df6b1-bps09",
+    "parent_html": "https://atlas.dev.pnnl.gov/records/df6b1-bps09",
+    "preview_html": "https://atlas.dev.pnnl.gov/records/edmv6-71620?preview=1",
+    "requests": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/requests",
+    "reserve_doi": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/draft/pids/doi",
+    "self": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620",
+    "self_html": "https://atlas.dev.pnnl.gov/records/edmv6-71620",
+    "self_iiif_manifest": "https://atlas.dev.pnnl.gov/api/iiif/record:edmv6-71620/manifest",
+    "self_iiif_sequence": "https://atlas.dev.pnnl.gov/api/iiif/record:edmv6-71620/sequence/default",
+    "versions": "https://atlas.dev.pnnl.gov/api/records/edmv6-71620/versions"
+  },
+  "media_files": {
+    "count": 0,
+    "enabled": false,
+    "entries": {},
+    "order": [],
+    "total_bytes": 0
+  },
+  "metadata": {
+    "copyright": "Copyright 2008 Battelle Memorial Institute",
+    "creators": [
+      {
+        "affiliations": [
+          {
+            "name": "Pacific Northwest National Laboratory"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Schneider",
+          "given_name": "Kevin",
+          "identifiers": [
+            {
+              "identifier": "0000-0003-1749-5014",
+              "scheme": "orcid"
+            }
+          ],
+          "name": "Schneider, Kevin",
+          "type": "personal"
+        },
+        "role": {
+          "id": "contactperson",
+          "title": {
+            "cs": "Kontaktn\u00ed osoba",
+            "de": "Kontaktperson",
+            "en": "Contact person",
+            "sv": "Kontaktperson"
+          }
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Pacific Northwest National Laboratory"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Chen",
+          "given_name": "Yousu",
+          "identifiers": [
+            {
+              "identifier": "0000-0001-7591-9597",
+              "scheme": "orcid"
+            }
+          ],
+          "name": "Chen, Yousu",
+          "type": "personal"
+        },
+        "role": {
+          "id": "other",
+          "title": {
+            "cs": "Jin\u00e9",
+            "de": "Andere",
+            "en": "Other",
+            "sv": "\u00d6vriga"
+          }
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Pacific Northwest National Laboratory"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Chassin",
+          "given_name": "David",
+          "identifiers": [
+            {
+              "identifier": "0000-0002-4914-4270",
+              "scheme": "orcid"
+            }
+          ],
+          "name": "Chassin, David",
+          "type": "personal"
+        },
+        "role": {
+          "id": "other",
+          "title": {
+            "cs": "Jin\u00e9",
+            "de": "Andere",
+            "en": "Other",
+            "sv": "\u00d6vriga"
+          }
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Pacific Northwest National Laboratory"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Pratt",
+          "given_name": "Robert",
+          "name": "Pratt, Robert",
+          "type": "personal"
+        },
+        "role": {
+          "id": "other",
+          "title": {
+            "cs": "Jin\u00e9",
+            "de": "Andere",
+            "en": "Other",
+            "sv": "\u00d6vriga"
+          }
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Pacific Northwest National Laboratory"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Engel",
+          "given_name": "David",
+          "name": "Engel, David",
+          "type": "personal"
+        },
+        "role": {
+          "id": "other",
+          "title": {
+            "cs": "Jin\u00e9",
+            "de": "Andere",
+            "en": "Other",
+            "sv": "\u00d6vriga"
+          }
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Pacific Northwest National Laboratory"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Thompson",
+          "given_name": "Sandy",
+          "name": "Thompson, Sandy",
+          "type": "personal"
+        },
+        "role": {
+          "id": "other",
+          "title": {
+            "cs": "Jin\u00e9",
+            "de": "Andere",
+            "en": "Other",
+            "sv": "\u00d6vriga"
+          }
+        }
+      }
+    ],
+    "description": "<p>As part of the US Department of Energy's Modern Grid Initiative, a set of prototypical electrical distribution feeder models were developed. These feeder models were based on 575 distribution utility models that were collected by the project team and using statistical clustering analysis, were generalized into 24 prototypical models based on the region of the country, the voltage class of the feeder, and the customer types served by the feeder. Though the feeder models used are proprietary, the published generalized models are not and contain no specific proprietary utility information. These models are saved in the GridLAB-D format.</p>",
+    "languages": [
+      {
+        "id": "eng",
+        "title": {
+          "en": "English"
+        }
+      }
+    ],
+    "publication_date": "2008-11",
+    "publisher": "Pacific Northwest National Laboratory",
+    "references": [
+      {
+        "reference": "Schneider, Kevin P., Chen, Yousu, Chassin, David P., et al., \"Modern Grid Initiative Distribution Taxonomy (Final Report),\" (2008), https://doi.org/10.2172/1040684"
+      }
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.2172/1040684",
+        "relation_type": {
+          "id": "isdocumentedby",
+          "title": {
+            "cs": "Je zdokumentov\u00e1n (\u010d\u00edm)",
+            "de": "Wird dokumentiert von",
+            "en": "Is documented by",
+            "sv": "\u00c4r dokumenterad av"
+          }
+        },
+        "resource_type": {
+          "id": "publication-report",
+          "title": {
+            "cs": "Zpr\u00e1va",
+            "de": "Bericht",
+            "en": "Report",
+            "sv": "Rapport"
+          }
+        },
+        "scheme": "doi"
+      },
+      {
+        "identifier": "https://github.com/gridlab-d/Taxonomy_Feeders",
+        "relation_type": {
+          "id": "ispublishedin",
+          "title": {
+            "cs": "Je publikov\u00e1n v",
+            "de": "Ist ver\u00f6ffentlicht in",
+            "en": "Is published in",
+            "sv": "\u00c4r publicerad i"
+          }
+        },
+        "resource_type": {
+          "id": "model",
+          "title": {
+            "cs": "Model",
+            "de": "Modell",
+            "en": "Model",
+            "sv": "Modell"
+          }
+        },
+        "scheme": "url"
+      }
+    ],
+    "resource_type": {
+      "id": "model",
+      "title": {
+        "cs": "Model",
+        "de": "Modell",
+        "en": "Model",
+        "sv": "Modell"
+      }
+    },
+    "rights": [
+      {
+        "description": {
+          "en": "The Creative Commons Attribution license allows re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited."
+        },
+        "icon": "cc-by-icon",
+        "id": "cc-by-4.0",
+        "props": {
+          "scheme": "spdx",
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        "title": {
+          "en": "Creative Commons Attribution 4.0 International"
+        }
+      }
+    ],
+    "subjects": [
+      {
+        "id": "http://www.oecd.org/science/inno/38235147.pdf?2.2",
+        "scheme": "FOS",
+        "subject": "Electrical engineering, electronic engineering, information engineering"
+      },
+      {
+        "subject": "Distribution system"
+      },
+      {
+        "subject": "Power system"
+      },
+      {
+        "subject": "Power system model"
+      }
+    ],
+    "title": "GridLAB-D Prototypical Taxonomy Feeders"
+  },
+  "parent": {
+    "access": {
+      "owned_by": {
+        "user": "5"
+      },
+      "settings": {
+        "accept_conditions_text": null,
+        "allow_guest_requests": false,
+        "allow_user_requests": false,
+        "secret_link_expiration": 0
+      }
+    },
+    "communities": {},
+    "id": "df6b1-bps09",
+    "pids": {}
+  },
+  "pids": {
+    "oai": {
+      "identifier": "oai:rdm-app.com:edmv6-71620",
+      "provider": "oai"
+    }
+  },
+  "revision_id": 13,
+  "stats": {
+    "all_versions": {
+      "data_volume": 0.0,
+      "downloads": 0,
+      "unique_downloads": 0,
+      "unique_views": 2,
+      "views": 5
+    },
+    "this_version": {
+      "data_volume": 0.0,
+      "downloads": 0,
+      "unique_downloads": 0,
+      "unique_views": 2,
+      "views": 5
+    }
+  },
+  "status": "published",
+  "updated": "2026-09-15T16:35:24.470226+00:00",
+  "versions": {
+    "index": 1,
+    "is_latest": true
+  }
+}
