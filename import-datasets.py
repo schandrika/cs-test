@@ -45,7 +45,8 @@ def get_or_create_community(community_name):
 
         if len(results) > 0:
             community_id = results[0]["id"]
-            print(f"  Using existing community: {display_title} (ID: {community_id})")
+            print(
+                f"  Using existing community: {display_title} (ID: {community_id})")
             return community_id
     except Exception as e:
         print(f"  Could not search for community: {str(e)}")
@@ -55,6 +56,7 @@ def get_or_create_community(community_name):
         slug = community_name.lower().replace(" ", "-").replace("_", "-")
 
         community_data = {
+            "slug": slug,
             "metadata": {
                 "title": display_title,
                 "description": f"Community for {display_title} datasets"
@@ -71,7 +73,8 @@ def get_or_create_community(community_name):
             uow.commit()
 
         community_id = community.id
-        print(f"  Created new community: {display_title} (ID: {community_id})")
+        print(
+            f"  Created new community: {display_title} (ID: {community_id})")
         return community_id
 
     except Exception as e:
@@ -171,14 +174,18 @@ def upload_files_from_zip(draft_id, zip_path):
             file_list = zip_ref.namelist()
 
             if not file_list:
-                print(f"  ⚠ Zip file is empty: {zip_path.name}")
+                print(f"  Zip file is empty: {zip_path.name}")
                 return uploaded_files
 
-            print(f"  ➡ Uploading {len(file_list)} file(s) from zip...")
+            print(f"  Uploading {len(file_list)} file(s) from zip...")
 
             with tempfile.TemporaryDirectory() as temp_dir:
                 temp_path = Path(temp_dir)
                 zip_ref.extractall(temp_path)
+
+                # Collect files to initialize
+                files_to_init = []
+                file_mapping = {}  # Maps cleaned filename to file path
 
                 for file_name in file_list:
                     # Skip directories
@@ -190,34 +197,49 @@ def upload_files_from_zip(draft_id, zip_path):
                     if not file_path.exists():
                         continue
 
-                    try:
-                        with open(file_path, 'rb') as f:
-                            # Initialize files on the draft if not already done
-                            try:
-                                current_rdm_records_service.files.init_files(
-                                    system_identity,
-                                    draft_id,
-                                    files=[{
-                                        "key": Path(file_name).name,
-                                    }]
-                                )
-                            except Exception:
-                                # Files might already be initialized, continue
-                                pass
+                    clean_filename = Path(file_name).name
+                    files_to_init.append({"key": clean_filename})
+                    file_mapping[clean_filename] = file_path
 
-                            # Upload the file content
-                            current_rdm_records_service.files.upload_file(
+                if not files_to_init:
+                    print(f"  No files to upload in zip")
+                    return uploaded_files
+
+                # Initialize files on draft (data is positional, not a kwarg)
+                try:
+                    current_rdm_records_service.files.init_files(
+                        system_identity,
+                        draft_id,
+                        files_to_init
+                    )
+                except Exception as e:
+                    print(f"  Could not initialize files: {str(e)}")
+                    return uploaded_files
+
+                # Upload and commit each file
+                for clean_filename, file_path in file_mapping.items():
+                    try:
+                        with open(file_path, 'rb') as fp:
+                            current_rdm_records_service.files.set_file_content(
                                 system_identity,
                                 draft_id,
-                                Path(file_name).name,
-                                f
+                                clean_filename,
+                                fp,
+                                content_length=file_path.stat().st_size
                             )
 
-                            uploaded_files.append(Path(file_name).name)
-                            print(f"    Uploaded: {Path(file_name).name}")
+                        # Commit the file to finalize the upload
+                        current_rdm_records_service.files.commit_file(
+                            system_identity,
+                            draft_id,
+                            clean_filename
+                        )
+
+                        uploaded_files.append(clean_filename)
+                        print(f"    Uploaded: {clean_filename}")
 
                     except Exception as e:
-                        print(f"    Failed to upload {file_name}: {str(e)}")
+                        print(f"    Failed to upload {clean_filename}: {str(e)}")
 
         if uploaded_files:
             print(f"  Successfully uploaded {len(uploaded_files)} file(s)")
@@ -265,7 +287,7 @@ def ingest_all_records():
 
             # Check cache first
             if community_name not in communities_cache:
-                print(f"\n Processing community: {community_name}")
+                print(f"\nProcessing community: {community_name}")
                 comm_id = get_or_create_community(community_name)
                 communities_cache[community_name] = comm_id
 
@@ -283,7 +305,8 @@ def ingest_all_records():
             with open(json_file, "r", encoding="utf-8") as f:
                 raw_data = json.load(f)
 
-            cleaned_data = sanitize_record(raw_data, enable_files=has_files, community_id=community_id)
+            cleaned_data = sanitize_record(
+                raw_data, enable_files=has_files, community_id=community_id)
 
             # Step 1: Create draft
             draft = create_draft(cleaned_data)
@@ -308,7 +331,7 @@ def ingest_all_records():
 
         except Exception as e:
             print(f"Failed: {json_file.name}")
-            print(f"  Error: {str(e)}\n")
+            print(f"Error: {str(e)}\n")
             traceback.print_exc()
             failed.append(json_file.name)
 
@@ -318,7 +341,7 @@ def ingest_all_records():
     print(f"  Successfully imported: {len(results)}")
     print(f"  Failed imports: {len(failed)}")
     if communities_cache:
-        print(f"   Communities created/used: {len(communities_cache)}")
+        print(f"  Communities created/used: {len(communities_cache)}")
     print(f"{'='*60}")
 
     if results:
@@ -326,7 +349,8 @@ def ingest_all_records():
         for result in results:
             files_info = f" ({result['files_uploaded']} files)" if result['files_uploaded'] > 0 else ""
             community_info = f" [Community: {result['community']}]" if result['community'] else ""
-            print(f"  - {result['title']} (ID: {result['record_id']}){files_info}{community_info}")
+            print(
+                f"  - {result['title']} (ID: {result['record_id']}){files_info}{community_info}")
 
     if failed:
         print("\nFailed to import:")
