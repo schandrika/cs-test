@@ -114,30 +114,7 @@ def sanitize_record(record_data, enable_files=False):
     metadata = record_data.get("metadata", {})
 
     result = {
-        "metadata": {
-            "title": metadata.get("title", "Untitled"),
-            "publication_date": (
-                metadata.get("publication_date", "2016").split("/")[0]
-                if metadata.get("publication_date")
-                else "2016"
-            ),
-            "resource_type": metadata.get("resource_type", {"id": "dataset"}),
-            "creators": metadata.get(
-                "creators",
-                [
-                    {
-                        "person_or_org": {
-                            "type": "organizational",
-                            "name": "Unknown"
-                        }
-                    }
-                ],
-            ),
-            "description": metadata.get("description", ""),
-            "contributors": metadata.get("contributors", []),
-            "subjects": metadata.get("subjects", []),
-            "keywords": metadata.get("keywords", []),
-        },
+        "metadata": metadata,
         "files": {"enabled": enable_files},
         "access": {
             "record": "public",
