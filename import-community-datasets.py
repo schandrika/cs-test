@@ -25,9 +25,13 @@ in the environment before running. Use AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY,
 AWS_SESSION_TOKEN (if using temporary SSO credentials), and AWS_DEFAULT_REGION.
 
 Usage:
-    pipenv run invenio shell import-datasets.py
+    pipenv run invenio shell import-datasets-community.py [attribute1 attribute2 ...]
+
+Optional metadata field names can be provided as positional arguments. Omitting
+them keeps all metadata fields.
 """
 
+import argparse
 import json
 import traceback
 import zipfile
@@ -101,7 +105,7 @@ def get_or_create_community(community_name):
         return None
 
 
-def sanitize_record(record_data, enable_files=False):
+def sanitize_record(record_data, enable_files=False, metadata_attributes=None):
     """
     Convert exported Invenio JSON into a minimal valid create payload.
     This removes all system-managed / invalid fields.
@@ -109,9 +113,20 @@ def sanitize_record(record_data, enable_files=False):
     Args:
         record_data: The raw record data from JSON
         enable_files: Whether to enable files for this record (default: False)
+        metadata_attributes: Optional list of top-level metadata fields to keep.
+            None keeps all fields; an empty list keeps none. Missing fields are ignored.
     """
 
-    metadata = record_data.get("metadata", {})
+    source_metadata = record_data.get("metadata", {})
+
+    if metadata_attributes is not None:
+        metadata = {
+            attribute: source_metadata[attribute]
+            for attribute in metadata_attributes
+            if attribute in source_metadata
+        }
+    else:
+        metadata = source_metadata
 
     result = {
         "metadata": metadata,
@@ -280,7 +295,7 @@ def upload_files_from_zip(draft_id, zip_path):
     return uploaded_files
 
 
-def ingest_all_records():
+def ingest_all_records(metadata_attributes=None):
     """Main entry point: ingest all JSON files in ./records, with support for community subfolders"""
 
     script_dir = Path(__file__).parent
@@ -333,7 +348,8 @@ def ingest_all_records():
                 raw_data = json.load(f)
 
             cleaned_data = sanitize_record(
-                raw_data, enable_files=has_files)
+                raw_data, enable_files=has_files,
+                metadata_attributes=metadata_attributes)
 
             # Step 1: Create draft
             draft = create_draft(cleaned_data)
@@ -402,4 +418,12 @@ def ingest_all_records():
 
 
 if __name__ == "__main__":
-    ingest_all_records()
+    parser = argparse.ArgumentParser(description="Import datasets into Invenio RDM.")
+    parser.add_argument(
+        "metadata_attributes",
+        nargs="*",
+        help="Metadata field names to keep; omit to keep all fields",
+    )
+    args = parser.parse_args()
+    metadata_attributes = args.metadata_attributes or None
+    ingest_all_records(metadata_attributes=metadata_attributes)
